@@ -178,6 +178,107 @@
   }
 }
 
+/* Advanced animations */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+/* Additional utility classes */
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.8s ease-out;
+}
+
+.animate-slide-down {
+  animation: slideInDown 0.8s ease-out;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.6s ease-out;
+}
+
+.animate-rotate-in {
+  animation: rotateIn 0.8s ease-out;
+}
+
+/* Enhanced hover effects */
+.hover-lift-slow {
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.hover-lift-slow:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.hover-rotate {
+  transition: transform 0.3s ease;
+}
+
+.hover-rotate:hover {
+  transform: rotate(2deg);
+}
+
+.hover-brightness {
+  transition: filter 0.3s ease;
+}
+
+.hover-brightness:hover {
+  filter: brightness(1.1);
+}
+
 /* Stagger animations for multiple elements */
 .stagger-1 { animation-delay: 0.1s; }
 .stagger-2 { animation-delay: 0.2s; }

@@ -14,7 +14,7 @@ const Footer = () => {
                 alt="Dream2 Home Logo" 
                 className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 xl:h-36 xl:w-36 mr-5 sm:mr-6 md:mr-8 object-contain"
               />
-              <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">Dream2 Home</span>
+              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">Dream2 Home</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               We buy houses directly from homeowners with quick closings, no fees, and fair cash offers. 

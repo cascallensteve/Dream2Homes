@@ -12,42 +12,86 @@ const Home = () => {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 text-white py-16 sm:py-20 md:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated background elements */}
+        {/* Background Image with Overlay */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-32 h-32 bg-accent-500 rounded-full opacity-10 animate-float"></div>
-          <div className="absolute bottom-10 right-10 w-48 h-48 bg-primary-400 rounded-full opacity-10 animate-pulse-slow"></div>
-          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white rounded-full opacity-5 animate-bounce-slow"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+            alt="Beautiful modern home"
+            className="w-full h-full object-cover opacity-20 animate-scale-in"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/90 via-primary-700/85 to-primary-800/90"></div>
         </div>
-        <div className="max-w-7xl mx-auto text-center relative z-10">
-          {/* Large Hero Logo */}
-          <div className="mb-8 sm:mb-10 md:mb-12 animate-fade-in">
-            <img 
-              src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1751526333/Blue_and_Green_Simple_Financial_Logo-removebg-preview_m4z4o7.png" 
-              alt="Dream2 Home Logo" 
-              className="h-32 w-32 sm:h-40 sm:w-40 md:h-48 md:w-48 lg:h-56 lg:w-56 xl:h-64 xl:w-64 2xl:h-72 2xl:w-72 mx-auto object-contain hover:scale-110 transition-transform duration-500 animate-pulse-slow"
-            />
-          </div>
-          
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-bold mb-6 sm:mb-8 md:mb-10 leading-tight animate-fade-in-delay">
-          Connect Sellers with Buyers
-          <span className="text-accent-300"> Off-Market Deals</span>
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-2xl mb-8 sm:mb-10 md:mb-12 max-w-5xl mx-auto text-primary-100 animate-fade-in-delay px-2 sm:px-4 md:px-6">
-          <span className="font-bold text-white">Dream2 Home</span> is a wholesaling company that connects property sellers with cash buyers for off-market deals. Skip the MLS, avoid realtor fees, and close fast with our direct buyer network.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center items-center animate-fade-in stagger-3">
-            <Link
-              to="/contact"
-              className="bg-accent-500 hover:bg-accent-600 text-white px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-4 md:py-5 rounded-lg md:rounded-xl font-semibold text-base sm:text-lg md:text-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-glow w-full sm:w-auto text-center"
-            >
-              Get My Cash Offer
-            </Link>
-            <a
-              href="tel:+1234567890"
-              className="border-2 md:border-3 border-white hover:bg-white hover:text-primary-800 text-white px-6 sm:px-8 md:px-10 lg:px-12 py-3 sm:py-4 md:py-5 rounded-lg md:rounded-xl font-semibold text-base sm:text-lg md:text-xl transition-all duration-300 hover-scale w-full sm:w-auto text-center"
-            >
-              Call (123) 456-7890
-            </a>
+        
+        {/* Animated floating elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-accent-500 rounded-full opacity-20 animate-float"></div>
+          <div className="absolute bottom-10 right-10 w-48 h-48 bg-primary-400 rounded-full opacity-15 animate-pulse-slow"></div>
+          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-white rounded-full opacity-10 animate-bounce-slow"></div>
+          <div className="absolute top-1/4 right-1/4 w-20 h-20 bg-accent-300 rounded-full opacity-15 animate-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-1/4 left-1/3 w-16 h-16 bg-primary-300 rounded-full opacity-10 animate-pulse-slow" style={{animationDelay: '1s'}}></div>
+        </div>
+        
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 sm:mb-8 md:mb-10 leading-tight animate-fade-in">
+                Connect Sellers with Buyers
+                <span className="text-accent-300 block sm:inline"> Off-Market Deals</span>
+              </h1>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-8 sm:mb-10 md:mb-12 max-w-2xl lg:max-w-none text-primary-100 animate-fade-in-delay">
+                <span className="font-bold text-white">Dream2 Home</span> is a wholesaling company that connects property sellers with cash buyers for off-market deals. Skip the MLS, avoid realtor fees, and close fast with our direct buyer network.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center lg:justify-start items-center animate-fade-in stagger-3">
+                <Link
+                  to="/contact"
+                  className="bg-accent-500 hover:bg-accent-600 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-lg md:rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 hover-glow w-full sm:w-auto text-center group"
+                >
+                  <span className="group-hover:scale-105 transition-transform duration-300 inline-block">Get My Cash Offer</span>
+                </Link>
+                <a
+                  href="tel:+1234567890"
+                  className="border-2 border-white hover:bg-white hover:text-primary-800 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-lg md:rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 hover-scale w-full sm:w-auto text-center backdrop-blur-sm bg-white/10"
+                >
+                  Call (123) 456-7890
+                </a>
+              </div>
+            </div>
+            
+            {/* Right Image */}
+            <div className="hidden lg:block relative">
+              <div className="relative">
+                {/* Floating badge */}
+                <div className="absolute -top-6 -left-6 bg-accent-500 rounded-xl p-4 shadow-2xl z-20 animate-bounce-slow">
+                  <div className="text-white text-center">
+                    <div className="text-xl font-bold">500+</div>
+                    <div className="text-xs">Deals Closed</div>
+                  </div>
+                </div>
+                
+                {/* Main image */}
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500">
+                  <img 
+                    src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                    alt="Real estate professionals working"
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/50 to-transparent"></div>
+                </div>
+                
+                {/* Bottom right badge */}
+                <div className="absolute -bottom-4 -right-4 bg-primary-600 rounded-xl p-4 shadow-2xl z-20 animate-float">
+                  <div className="text-white text-center">
+                    <div className="text-xl font-bold">24hrs</div>
+                    <div className="text-xs">Quick Response</div>
+                  </div>
+                </div>
+                
+                {/* Decorative elements */}
+                <div className="absolute top-1/2 -right-8 w-16 h-16 bg-accent-400 rounded-full opacity-60 animate-pulse-slow"></div>
+                <div className="absolute -top-4 right-1/4 w-12 h-12 bg-white rounded-full opacity-30 animate-float" style={{animationDelay: '1.5s'}}></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -56,27 +100,27 @@ const Home = () => {
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
               Why Choose Dream2 Home?
             </h2>
-            <p className="text-lg sm:text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto px-4">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               We make selling your house simple, fast, and profitable.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
-            <div className="text-center group hover:bg-primary-50 p-6 sm:p-8 md:p-10 rounded-xl md:rounded-2xl transition-all duration-300 animate-on-scroll hover-lift stagger-1">
+            <div className="text-center group hover:bg-primary-50 p-6 sm:p-8 md:p-10 rounded-xl md:rounded-2xl transition-all duration-500 animate-slide-up hover-lift-slow stagger-1 hover-brightness">
               <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 animate-float">
                 <svg className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                 </svg>
               </div>
-              <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-gray-900">Direct Buyer Network</h3>
-              <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">We connect you directly with our network of cash buyers. No MLS listing required, no realtor fees.</p>
+              <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-3 sm:mb-4 text-gray-900">Direct Buyer Network</h3>
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">We connect you directly with our network of cash buyers. No MLS listing required, no realtor fees.</p>
             </div>
 
-            <div className="text-center group hover:bg-primary-50 p-6 rounded-xl transition-all duration-300 animate-on-scroll hover-lift stagger-2">
-              <div className="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 animate-float">
+            <div className="text-center group hover:bg-primary-50 p-6 sm:p-8 md:p-10 rounded-xl md:rounded-2xl transition-all duration-500 animate-slide-up hover-lift-slow stagger-2 hover-brightness">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300 animate-float hover-rotate">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -102,10 +146,10 @@ const Home = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-4">
               How It Works
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               Our simple 3-step process gets you cash for your house quickly.
             </p>
           </div>
@@ -120,8 +164,8 @@ const Home = () => {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-gray-900">Submit Your Property</h3>
-              <p className="text-gray-600">Fill out our simple form with your property details. Takes less than 2 minutes.</p>
+              <h3 className="text-lg font-semibold mb-3 text-gray-900">Submit Your Property</h3>
+              <p className="text-sm sm:text-base text-gray-600">Fill out our simple form with your property details. Takes less than 2 minutes.</p>
             </div>
 
             <div className="text-center relative">
@@ -412,11 +456,11 @@ const Home = () => {
         
         <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
           {/* CTA Logo */}
-          <div className="mb-6 animate-scale-in">
+          <div className="mb-6 animate-zoom-in">
             <img 
               src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1751526333/Blue_and_Green_Simple_Financial_Logo-removebg-preview_m4z4o7.png" 
               alt="Dream2 Home Logo" 
-              className="h-20 w-20 sm:h-24 sm:w-24 md:h-32 md:w-32 lg:h-36 lg:w-36 mx-auto object-contain animate-bounce-slow opacity-90"
+              className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 mx-auto object-contain animate-pulse-slow opacity-90 hover-scale"
             />
           </div>
           
