@@ -66,13 +66,33 @@ const Contact = () => {
 
     setIsSubmitting(true);
     
-    // Simulate API call
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setIsSubmitted(true);
-      console.log('Form submitted:', formData);
+      // Create FormData for GetForm.io submission
+      const formDataToSubmit = new FormData();
+      formDataToSubmit.append('fullName', formData.fullName);
+      formDataToSubmit.append('email', formData.email);
+      formDataToSubmit.append('phone', formData.phone);
+      formDataToSubmit.append('propertyAddress', formData.propertyAddress);
+      formDataToSubmit.append('preferredContact', formData.preferredContact);
+      formDataToSubmit.append('message', formData.message || 'No additional details provided');
+      formDataToSubmit.append('submissionDate', new Date().toISOString());
+      formDataToSubmit.append('source', 'Dream2 Home Website');
+
+      // Submit to GetForm.io
+      const response = await fetch('https://getform.io/f/azynellb', {
+        method: 'POST',
+        body: formDataToSubmit
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        console.log('Form submitted successfully:', formData);
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       console.error('Error submitting form:', error);
+      alert('There was an error submitting your form. Please try again or call us directly at (123) 456-7890.');
     } finally {
       setIsSubmitting(false);
     }
@@ -89,7 +109,8 @@ const Contact = () => {
           </div>
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Thank You!</h2>
           <p className="text-gray-600 mb-6">
-            We've received your information and will contact you within 24 hours with your cash offer.
+            We've received your property information and will contact you within 24 hours with your cash offer. 
+            Your submission has been securely processed.
           </p>
           <p className="text-sm text-gray-500 mb-6">
             If you have any urgent questions, please call us at <strong>(123) 456-7890</strong>
@@ -156,7 +177,17 @@ const Contact = () => {
             {/* Form */}
             <div className="bg-white rounded-xl shadow-lg p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Property Information</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                action="https://getform.io/f/azynellb" 
+                method="POST" 
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
+                {/* Hidden fields for tracking */}
+                <input type="hidden" name="_gotcha" style={{display: 'none'}} />
+                <input type="hidden" name="source" value="Dream2 Home Website" />
+                <input type="hidden" name="submissionDate" value={new Date().toISOString()} />
+                
                 <div>
                   <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
