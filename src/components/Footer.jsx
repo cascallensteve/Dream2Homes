@@ -11,10 +11,10 @@ const Footer = () => {
             <div className="flex items-center mb-8">
               <img 
                 src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1751526333/Blue_and_Green_Simple_Financial_Logo-removebg-preview_m4z4o7.png" 
-                alt="Dream2 Home Logo" 
+                alt="Dreams2Home Logo" 
                 className="h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 lg:h-32 lg:w-32 xl:h-36 xl:w-36 mr-5 sm:mr-6 md:mr-8 object-contain"
               />
-              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">Dream2 Home</span>
+              <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">Dreams2Home</span>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
               We buy houses directly from homeowners with quick closings, no fees, and fair cash offers. 
@@ -90,7 +90,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              <p>&copy; 2024 Dream2 Home. All rights reserved.</p>
+              <p>&copy; 2024 Dreams2Home. All rights reserved.</p>
             </div>
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-gray-400">
               <p>Licensed Real Estate Professionals</p>
@@ -103,7 +103,7 @@ const Footer = () => {
           
           <div className="mt-4 pt-4 border-t border-gray-800">
             <p className="text-xs text-gray-500 text-center">
-              <strong>Disclaimer:</strong> Dream2 Home is a real estate investment company. We are not licensed real estate agents or brokers. 
+              <strong>Disclaimer:</strong> Dreams2Home is a real estate investment company. We are not licensed real estate agents or brokers. 
               We buy properties directly and do not list properties for sale. This website is for informational purposes only and does not constitute 
               an offer to purchase any specific property. All property purchases are subject to inspection and final approval.
             </p>

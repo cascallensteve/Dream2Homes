@@ -1,10 +1,10 @@
-# Dream2 Home
+# Dreams2Home
 
-A modern, responsive website for Dream2 Home - a real estate wholesaling company that connects property sellers with qualified cash buyers for off-market deals.
+A modern, responsive website for Dreams2Home - a real estate wholesaling company that connects property sellers with qualified cash buyers for off-market deals.
 
-## 🏠 About Dream2 Home
+## 🏠 About Dreams2Home
 
-Dream2 Home specializes in real estate wholesaling, creating win-win opportunities by connecting motivated sellers with qualified cash buyers. We eliminate the need for MLS listings and traditional real estate processes, providing faster, more efficient transactions.
+Dreams2Home specializes in real estate wholesaling, creating win-win opportunities by connecting motivated sellers with qualified cash buyers. We eliminate the need for MLS listings and traditional real estate processes, providing faster, more efficient transactions.
 
 ## ✨ Features
 
@@ -80,7 +80,7 @@ src/
 
 ### Homepage
 - **Hero Section**: Large logo, compelling headline, and CTA buttons
-- **Benefits**: Why choose Dream2 Home for wholesaling
+- **Benefits**: Why choose Dreams2Home for wholesaling
 - **How It Works**: 3-step process explanation
 - **Mission**: Company values and network details
 - **Statistics**: Key performance metrics
@@ -92,7 +92,7 @@ src/
 - **Track Record**: 500+ deals facilitated
 - **What Sets Us Apart**: Unique value propositions
 - **Off-Market Benefits**: Advantages explained
-- **Comparison Table**: Traditional vs Dream2 Home
+- **Comparison Table**: Traditional vs Dreams2Home
 
 ### Contact Page
 - **Contact Form**: Lead generation
@@ -101,7 +101,7 @@ src/
 
 ## 🎯 Business Model
 
-Dream2 Home operates as a real estate wholesaling company:
+Dreams2Home operates as a real estate wholesaling company:
 - **For Sellers**: Quick, off-market property sales without MLS listings
 - **For Buyers**: Access to exclusive investment opportunities
 - **No Fees**: Direct connections without traditional realtor commissions
@@ -125,14 +125,14 @@ The website uses Tailwind CSS with custom color schemes:
 
 ## 📞 Contact Information
 
-- **Website**: [Dream2 Home](#)
+- **Website**: [Dreams2Home](#)
 - **Phone**: (817) 653-9233
 - **Email**: info@dream2home.com
 - **Business Hours**: Monday-Friday, 9AM-6PM
 
 ## 📄 License
 
-This project is proprietary to Dream2 Home. All rights reserved.
+This project is proprietary to Dreams2Home. All rights reserved.
 
 ## 🚀 Deployment
 
@@ -144,4 +144,4 @@ The website is ready for deployment on platforms like:
 
 ---
 
-Built with ❤️ for Dream2 Home - Connecting Sellers with Buyers for Off-Market Deals
+Built with ❤️ for Dreams2Home - Connecting Sellers with Buyers for Off-Market Deals

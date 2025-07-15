@@ -8,7 +8,7 @@ const About = () => {
       <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            About Dream2 Home
+            About Dreams2Home
           </h1>
           <p className="text-xl md:text-2xl text-primary-100">
             Your trusted partner in fast, fair property sales
@@ -25,7 +25,7 @@ const About = () => {
                 Who We Are
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                Dream2 Home is a specialized real estate wholesaling company that bridges the gap between motivated sellers and qualified cash buyers. We've been serving our community for over 5 years, facilitating hundreds of off-market transactions that benefit both sellers and investors.
+                Dreams2Home is a specialized real estate wholesaling company that bridges the gap between motivated sellers and qualified cash buyers. We've been serving our community for over 5 years, facilitating hundreds of off-market transactions that benefit both sellers and investors.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Founded by real estate professionals who recognized the inefficiencies in traditional real estate sales, we've built our reputation on creating win-win opportunities. Our team combines decades of real estate experience with an extensive network of cash buyers, enabling us to facilitate quick, profitable transactions without the complications of MLS listings.
@@ -237,34 +237,34 @@ const About = () => {
             </div>
 
             <div className="bg-gradient-to-br from-primary-600 to-primary-800 rounded-2xl p-8 text-white">
-              <h3 className="text-2xl font-bold mb-6">Traditional Sale vs. Dream2 Home</h3>
+              <h3 className="text-2xl font-bold mb-6">Traditional Sale vs. Dreams2Home</h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-2 border-b border-primary-400">
                   <span>Time to Close</span>
                   <div className="text-right">
                     <div className="text-sm text-primary-200">Traditional: 30-60 days</div>
-                    <div className="font-semibold">Dream2 Home: 7 days</div>
+                    <div className="font-semibold">Dreams2Home: 7 days</div>
                   </div>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-primary-400">
                   <span>Fees & Commissions</span>
                   <div className="text-right">
                     <div className="text-sm text-primary-200">Traditional: 6-10%</div>
-                    <div className="font-semibold">Dream2 Home: $0</div>
+                    <div className="font-semibold">Dreams2Home: $0</div>
                   </div>
                 </div>
                 <div className="flex justify-between items-center py-2 border-b border-primary-400">
                   <span>Repairs Needed</span>
                   <div className="text-right">
                     <div className="text-sm text-primary-200">Traditional: Usually</div>
-                    <div className="font-semibold">Dream2 Home: None</div>
+                    <div className="font-semibold">Dreams2Home: None</div>
                   </div>
                 </div>
                 <div className="flex justify-between items-center py-2">
                   <span>Certainty of Sale</span>
                   <div className="text-right">
                     <div className="text-sm text-primary-200">Traditional: 60-70%</div>
-                    <div className="font-semibold">Dream2 Home: 98%</div>
+                    <div className="font-semibold">Dreams2Home: 98%</div>
                   </div>
                 </div>
               </div>
@@ -280,7 +280,7 @@ const About = () => {
             Ready to Experience the Difference?
           </h2>
           <p className="text-xl mb-8 text-accent-100">
-            See why hundreds of homeowners have chosen Dream2 Home for their property sales.
+            See why hundreds of homeowners have chosen Dreams2Home for their property sales.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

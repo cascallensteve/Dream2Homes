@@ -15,10 +15,10 @@ const Navigation = () => {
             <Link to="/" className="flex items-center">
               <img 
                 src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1751526333/Blue_and_Green_Simple_Financial_Logo-removebg-preview_m4z4o7.png" 
-                alt="Dream2 Home Logo" 
+                alt="Dreams2Home Logo" 
                 className="h-20 w-20 sm:h-24 sm:w-24 md:h-32 md:w-32 lg:h-36 lg:w-36 xl:h-40 xl:w-40 mr-4 sm:mr-5 md:mr-6 object-contain hover:scale-110 transition-transform duration-300"
               />
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">Dream2 Home</span>
+              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">Dreams2Home</span>
             </Link>
           </div>
 

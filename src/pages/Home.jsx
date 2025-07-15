@@ -40,7 +40,7 @@ const Home = () => {
                 <span className="text-accent-300 block sm:inline"> Off-Market Deals</span>
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl mb-8 sm:mb-10 md:mb-12 max-w-2xl lg:max-w-none text-primary-100 animate-fade-in-delay">
-                <span className="font-bold text-white">Dream2 Home</span> is a wholesaling company that connects property sellers with cash buyers for off-market deals. Skip the MLS, avoid realtor fees, and close fast with our direct buyer network.
+                <span className="font-bold text-white">Dreams2Home</span> is a wholesaling company that connects property sellers with cash buyers for off-market deals. Skip the MLS, avoid realtor fees, and close fast with our direct buyer network.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 justify-center lg:justify-start items-center animate-fade-in stagger-3">
                 <Link
@@ -101,7 +101,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
-              Why Choose Dream2 Home?
+              Why Choose Dreams2Home?
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               We make selling your house simple, fast, and profitable.
@@ -209,13 +209,13 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl transform rotate-6 opacity-20"></div>
               <img 
                 src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80"
-                alt="Modern house representing Dream2 Home services"
+                alt="Modern house representing Dreams2Home services"
                 className="relative z-10 rounded-2xl shadow-2xl w-full h-64 md:h-80 object-cover hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute -top-6 -left-6 bg-white rounded-xl p-3 shadow-lg z-20">
                 <img 
                   src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1751526333/Blue_and_Green_Simple_Financial_Logo-removebg-preview_m4z4o7.png" 
-                  alt="Dream2 Home Logo" 
+                  alt="Dreams2Home Logo" 
                   className="h-16 w-16 sm:h-20 sm:w-20 object-contain animate-float"
                 />
               </div>
@@ -231,7 +231,7 @@ const Home = () => {
                 Our Mission
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                At Dream2 Home, we specialize in real estate wholesaling - connecting motivated sellers with qualified cash buyers for off-market deals. We streamline the process, eliminate the middleman, and create win-win opportunities for both parties.
+                At Dreams2Home, we specialize in real estate wholesaling - connecting motivated sellers with qualified cash buyers for off-market deals. We streamline the process, eliminate the middleman, and create win-win opportunities for both parties.
               </p>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Our extensive network of cash buyers allows us to provide immediate solutions for property sellers while offering investors access to exclusive off-market opportunities. No MLS listings, no lengthy processes - just direct, efficient transactions.
@@ -255,17 +255,17 @@ const Home = () => {
         <div className="absolute inset-0 opacity-5">
           <img 
             src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1751526333/Blue_and_Green_Simple_Financial_Logo-removebg-preview_m4z4o7.png" 
-            alt="Dream2 Home Logo Background" 
+            alt="Dreams2Home Logo Background" 
             className="absolute top-10 left-10 h-32 w-32 object-contain animate-float"
           />
           <img 
             src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1751526333/Blue_and_Green_Simple_Financial_Logo-removebg-preview_m4z4o7.png" 
-            alt="Dream2 Home Logo Background" 
+            alt="Dreams2Home Logo Background" 
             className="absolute bottom-10 right-10 h-40 w-40 object-contain animate-pulse-slow"
           />
           <img 
             src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1751526333/Blue_and_Green_Simple_Financial_Logo-removebg-preview_m4z4o7.png" 
-            alt="Dream2 Home Logo Background" 
+            alt="Dreams2Home Logo Background" 
             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-48 w-48 object-contain animate-bounce-slow"
           />
         </div>
@@ -307,7 +307,7 @@ const Home = () => {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Real stories from real people who chose Dream2 Home for their property transactions.
+              Real stories from real people who chose Dreams2Home for their property transactions.
             </p>
           </div>
           
@@ -325,7 +325,7 @@ const Home = () => {
                 </div>
               </div>
               <p className="text-gray-700 italic mb-4">
-                "Dream2 Home made selling my inherited property so easy. They connected me with a cash buyer in just 5 days. No repairs, no hassle, just a fair deal."
+                "Dreams2Home made selling my inherited property so easy. They connected me with a cash buyer in just 5 days. No repairs, no hassle, just a fair deal."
               </p>
               <div className="flex text-yellow-400">
                 {"★".repeat(5)}
@@ -345,7 +345,7 @@ const Home = () => {
                 </div>
               </div>
               <p className="text-gray-700 italic mb-4">
-                "As an investor, I love working with Dream2 Home. They consistently bring me quality off-market deals that I can't find anywhere else."
+                "As an investor, I love working with Dreams2Home. They consistently bring me quality off-market deals that I can't find anywhere else."
               </p>
               <div className="flex text-yellow-400">
                 {"★".repeat(5)}
@@ -365,7 +365,7 @@ const Home = () => {
                 </div>
               </div>
               <p className="text-gray-700 italic mb-4">
-                "Facing foreclosure was stressful, but Dream2 Home helped me find a solution quickly. Their network of buyers saved my credit score."
+                "Facing foreclosure was stressful, but Dreams2Home helped me find a solution quickly. Their network of buyers saved my credit score."
               </p>
               <div className="flex text-yellow-400">
                 {"★".repeat(5)}
@@ -459,7 +459,7 @@ const Home = () => {
           <div className="mb-6 animate-zoom-in">
             <img 
               src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1751526333/Blue_and_Green_Simple_Financial_Logo-removebg-preview_m4z4o7.png" 
-              alt="Dream2 Home Logo" 
+              alt="Dreams2Home Logo" 
               className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 lg:h-28 lg:w-28 mx-auto object-contain animate-pulse-slow opacity-90 hover-scale"
             />
           </div>

@@ -78,7 +78,7 @@ const Contact = () => {
       formDataToSubmit.append('userType', formData.userType);
       formDataToSubmit.append('message', formData.message || 'No additional details provided');
       formDataToSubmit.append('submissionDate', new Date().toISOString());
-      formDataToSubmit.append('source', 'Dream2 Home Website');
+      formDataToSubmit.append('source', 'Dreams2Home Website');
 
       // Submit to GetForm.io
       const response = await fetch('https://getform.io/f/azynellb', {
@@ -145,7 +145,7 @@ const Contact = () => {
       <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Connect With Dream2 Home
+            Connect With Dreams2Home
           </h1>
           <p className="text-xl md:text-2xl text-primary-100 mb-8">
             Whether you're selling or buying, we're here to help you with your real estate needs
@@ -188,7 +188,7 @@ const Contact = () => {
               >
                 {/* Hidden fields for tracking */}
                 <input type="hidden" name="_gotcha" style={{display: 'none'}} />
-                <input type="hidden" name="source" value="Dream2 Home Website" />
+                <input type="hidden" name="source" value="Dreams2Home Website" />
                 <input type="hidden" name="submissionDate" value={new Date().toISOString()} />
                 
                 <div>
@@ -350,7 +350,7 @@ const Contact = () => {
                 </button>
 
                 <p className="text-sm text-gray-600 text-center">
-                  By submitting this form, you agree to receive communications from Dream2 Home. 
+                  By submitting this form, you agree to receive communications from Dreams2Home. 
                   We respect your privacy and will never share your information.
                 </p>
               </form>
