@@ -50,10 +50,10 @@ const Home = () => {
                   <span className="group-hover:scale-105 transition-transform duration-300 inline-block">Get My Cash Offer</span>
                 </Link>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+18176539233"
                   className="border-2 border-white hover:bg-white hover:text-primary-800 text-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-lg md:rounded-xl font-semibold text-base sm:text-lg transition-all duration-300 hover-scale w-full sm:w-auto text-center backdrop-blur-sm bg-white/10"
                 >
-                  Call (123) 456-7890
+                  Call (817) 653-9233
                 </a>
               </div>
             </div>
@@ -478,10 +478,10 @@ const Home = () => {
               🏠 Get Connected Now
             </Link>
             <a
-              href="tel:+1234567890"
+              href="tel:+18176539233"
               className="border-3 border-white hover:bg-white hover:text-primary-800 text-white px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 backdrop-blur-sm bg-white/10 hover-scale"
             >
-              📞 Call (123) 456-7890
+              📞 Call (817) 653-9233
             </a>
           </div>
           

@@ -290,10 +290,10 @@ const About = () => {
               Get Your Free Offer
             </Link>
             <a
-              href="tel:+1234567890"
+              href="tel:+18176539233"
               className="border-2 border-white hover:bg-white hover:text-accent-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
-              Call (123) 456-7890
+              Call (817) 653-9233
             </a>
           </div>
         </div>

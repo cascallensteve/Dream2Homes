@@ -126,7 +126,7 @@ The website uses Tailwind CSS with custom color schemes:
 ## 📞 Contact Information
 
 - **Website**: [Dream2 Home](#)
-- **Phone**: (123) 456-7890
+- **Phone**: (817) 653-9233
 - **Email**: info@dream2home.com
 - **Business Hours**: Monday-Friday, 9AM-6PM
 

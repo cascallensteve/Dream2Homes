@@ -7,7 +7,8 @@ const Contact = () => {
     phone: '',
     propertyAddress: '',
     message: '',
-    preferredContact: 'email'
+    preferredContact: 'email',
+    userType: 'seller'
   });
   
   const [errors, setErrors] = useState({});
@@ -74,6 +75,7 @@ const Contact = () => {
       formDataToSubmit.append('phone', formData.phone);
       formDataToSubmit.append('propertyAddress', formData.propertyAddress);
       formDataToSubmit.append('preferredContact', formData.preferredContact);
+      formDataToSubmit.append('userType', formData.userType);
       formDataToSubmit.append('message', formData.message || 'No additional details provided');
       formDataToSubmit.append('submissionDate', new Date().toISOString());
       formDataToSubmit.append('source', 'Dream2 Home Website');
@@ -92,7 +94,7 @@ const Contact = () => {
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('There was an error submitting your form. Please try again or call us directly at (123) 456-7890.');
+      alert('There was an error submitting your form. Please try again or call us directly at (817) 653-9233.');
     } finally {
       setIsSubmitting(false);
     }
@@ -113,7 +115,7 @@ const Contact = () => {
             Your submission has been securely processed.
           </p>
           <p className="text-sm text-gray-500 mb-6">
-            If you have any urgent questions, please call us at <strong>(123) 456-7890</strong>
+            If you have any urgent questions, please call us at <strong>(817) 653-9233</strong>
           </p>
           <button
             onClick={() => {
@@ -124,7 +126,8 @@ const Contact = () => {
                 phone: '',
                 propertyAddress: '',
                 message: '',
-                preferredContact: 'email'
+                preferredContact: 'email',
+                userType: 'seller'
               });
             }}
             className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-lg transition-colors"
@@ -142,29 +145,29 @@ const Contact = () => {
       <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Get Your Cash Offer Today
+            Connect With Dream2 Home
           </h1>
           <p className="text-xl md:text-2xl text-primary-100 mb-8">
-            Fill out the form below and receive your no-obligation cash offer within 24 hours
+            Whether you're selling or buying, we're here to help you with your real estate needs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center text-primary-100">
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              No obligation
+              For Sellers & Buyers
             </div>
             <div className="flex items-center text-primary-100">
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              24-hour response
+              Expert Guidance
             </div>
             <div className="flex items-center text-primary-100">
               <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
-              Fair cash offers
+              Fast Response
             </div>
           </div>
         </div>
@@ -176,7 +179,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Form */}
             <div className="bg-white rounded-xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Property Information</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
               <form 
                 action="https://getform.io/f/azynellb" 
                 method="POST" 
@@ -187,6 +190,36 @@ const Contact = () => {
                 <input type="hidden" name="_gotcha" style={{display: 'none'}} />
                 <input type="hidden" name="source" value="Dream2 Home Website" />
                 <input type="hidden" name="submissionDate" value={new Date().toISOString()} />
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-4">
+                    I am a *
+                  </label>
+                  <div className="flex gap-4">
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="userType"
+                        value="seller"
+                        checked={formData.userType === 'seller'}
+                        onChange={handleChange}
+                        className="mr-2 text-primary-600 focus:ring-primary-500"
+                      />
+                      Property Seller
+                    </label>
+                    <label className="flex items-center">
+                      <input
+                        type="radio"
+                        name="userType"
+                        value="buyer"
+                        checked={formData.userType === 'buyer'}
+                        onChange={handleChange}
+                        className="mr-2 text-primary-600 focus:ring-primary-500"
+                      />
+                      Property Buyer
+                    </label>
+                  </div>
+                </div>
                 
                 <div>
                   <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -238,7 +271,7 @@ const Contact = () => {
                       className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors ${
                         errors.phone ? 'border-red-500' : 'border-gray-300'
                       }`}
-                      placeholder="(123) 456-7890"
+                      placeholder="(817) 653-9233"
                     />
                     {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
                   </div>
@@ -246,7 +279,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="propertyAddress" className="block text-sm font-medium text-gray-700 mb-2">
-                    Property Address *
+                    {formData.userType === 'seller' ? 'Property Address *' : 'Area of Interest *'}
                   </label>
                   <input
                     type="text"
@@ -257,7 +290,7 @@ const Contact = () => {
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors ${
                       errors.propertyAddress ? 'border-red-500' : 'border-gray-300'
                     }`}
-                    placeholder="123 Main St, City, State 12345"
+                    placeholder={formData.userType === 'seller' ? "123 Main St, City, State 12345" : "City, State or ZIP code"}
                   />
                   {errors.propertyAddress && <p className="mt-1 text-sm text-red-600">{errors.propertyAddress}</p>}
                 </div>
@@ -281,7 +314,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Tell us about your property (optional)
+                    {formData.userType === 'seller' ? 'Tell us about your property (optional)' : 'Tell us about your requirements (optional)'}
                   </label>
                   <textarea
                     id="message"
@@ -290,7 +323,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors"
-                    placeholder="Property condition, timeline, any special circumstances..."
+                    placeholder={formData.userType === 'seller' ? "Property condition, timeline, any special circumstances..." : "Budget, preferred features, timeline, etc..."}
                   />
                 </div>
 
@@ -312,7 +345,7 @@ const Contact = () => {
                       Processing...
                     </div>
                   ) : (
-                    'Get My Cash Offer'
+                    formData.userType === 'seller' ? 'Get My Cash Offer' : 'Find Properties'
                   )}
                 </button>
 
@@ -336,7 +369,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">Phone</p>
-                      <a href="tel:+1234567890" className="text-primary-600 hover:text-primary-700">(123) 456-7890</a>
+                      <a href="tel:+18176539233" className="text-primary-600 hover:text-primary-700">(817) 653-9233</a>
                     </div>
                   </div>
 
@@ -348,7 +381,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900">Email</p>
-                      <a href="mailto:info@dreams2home.com" className="text-primary-600 hover:text-primary-700">info@dreams2home.com</a>
+                      <a href="mailto:joshua.abuto@dreams2home.com" className="text-primary-600 hover:text-primary-700">joshua.abuto@dreams2home.com</a>
                     </div>
                   </div>
 
@@ -375,10 +408,10 @@ const Contact = () => {
                   we can help. Call us now for immediate assistance.
                 </p>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+18176539233"
                   className="bg-white text-accent-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
                 >
-                  Call Now: (123) 456-7890
+                  Call Now: (817) 653-9233
                 </a>
               </div>
 
