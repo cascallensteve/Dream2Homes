@@ -1,64 +1,90 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const isActive = (path) => location.pathname === path;
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-black sticky top-0 z-50 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-24 sm:h-28 md:h-36 lg:h-40 xl:h-44">
+        <div className="flex justify-between h-20 lg:h-24">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center group">
               <img 
-                src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1751526333/Blue_and_Green_Simple_Financial_Logo-removebg-preview_m4z4o7.png" 
+                src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1754364124/Dreams_G24__1_-removebg-preview_p7v2fd.png" 
                 alt="Dreams2Home Logo" 
-                className="h-20 w-20 sm:h-24 sm:w-24 md:h-32 md:w-32 lg:h-36 lg:w-36 xl:h-40 xl:w-40 mr-4 sm:mr-5 md:mr-6 object-contain hover:scale-110 transition-transform duration-300"
+                className="h-12 w-12 lg:h-16 lg:w-16 mr-3 lg:mr-4 object-contain group-hover:scale-110 transition-all duration-300 filter brightness-110"
               />
-              <span className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">Dreams2Home</span>
+              <span className="text-xl lg:text-2xl font-bold text-white bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">Dreams2Home</span>
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             <Link
               to="/"
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+              className={`text-base font-medium transition-colors duration-300 ${
                 isActive('/') 
-                  ? 'text-primary-600 bg-primary-50' 
-                  : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                  ? 'text-blue-400' 
+                  : 'text-white hover:text-gray-300'
               }`}
             >
-              Home
+              How it works
             </Link>
             <Link
               to="/about"
-              className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+              className={`text-base font-medium transition-colors duration-300 ${
                 isActive('/about') 
-                  ? 'text-primary-600 bg-primary-50' 
-                  : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                  ? 'text-blue-400' 
+                  : 'text-white hover:text-gray-300'
               }`}
             >
               About Us
             </Link>
             <Link
               to="/contact"
-              className={`px-3 py-2 rounded-md text-sm lg:text-base font-medium transition-colors ${
+              className={`text-base font-medium transition-colors duration-300 ${
                 isActive('/contact') 
-                  ? 'text-primary-600 bg-primary-50' 
-                  : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                  ? 'text-blue-400' 
+                  : 'text-white hover:text-gray-300'
               }`}
             >
-              Contact
+              Contact us
             </Link>
             <Link
-              to="/contact"
-              className="bg-accent-500 hover:bg-accent-600 text-white px-4 lg:px-6 xl:px-8 py-2 lg:py-3 rounded-lg font-medium lg:font-semibold text-sm lg:text-base transition-colors shadow-lg hover:shadow-xl"
+              to="/property-listing"
+              className={`text-base font-medium transition-colors duration-300 ${
+                isActive('/property-listing') 
+                  ? 'text-blue-400' 
+                  : 'text-white hover:text-gray-300'
+              }`}
             >
-              Get My Offer
+              Property Listings
+            </Link>
+            
+            {/* Green CTA Button */}
+            <Link
+              to="/contact"
+              className="bg-green-500 hover:bg-green-600 text-black px-6 py-3 rounded-full font-semibold text-base transition-all duration-300 hover:scale-105 inline-flex items-center"
+            >
+              <span>Get Cash Offer</span>
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
             </Link>
           </div>
 
@@ -66,7 +92,7 @@ const Navigation = () => {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700 hover:text-primary-600 focus:outline-none focus:text-primary-600"
+              className="text-gray-300 hover:text-white focus:outline-none focus:text-white transition-colors duration-300"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 {isOpen ? (
@@ -81,48 +107,57 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-4 sm:pb-6">
-            <div className="flex flex-col space-y-3 sm:space-y-4">
+          <div className="lg:hidden pb-6 bg-gray-800/95 backdrop-blur-md rounded-b-lg border-t border-gray-700 animate-fade-in-down">
+            <div className="flex flex-col space-y-2 pt-4 stagger-children">
               <Link
                 to="/"
                 onClick={() => setIsOpen(false)}
-                className={`px-4 py-3 rounded-md text-base sm:text-lg font-medium transition-colors ${
+                className={`relative px-4 py-3 mx-2 rounded-lg text-base font-medium transition-all duration-300 hover-scale group overflow-hidden ${
                   isActive('/') 
-                    ? 'text-primary-600 bg-primary-50' 
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? 'text-blue-400 bg-gray-700/50' 
+                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
                 }`}
               >
-                Home
+                <span className="relative z-10">Home</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
               <Link
                 to="/about"
                 onClick={() => setIsOpen(false)}
-                className={`px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                className={`relative px-4 py-3 mx-2 rounded-lg text-base font-medium transition-all duration-300 hover-scale group overflow-hidden ${
                   isActive('/about') 
-                    ? 'text-primary-600 bg-primary-50' 
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? 'text-blue-400 bg-gray-700/50' 
+                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
                 }`}
               >
-                About Us
+                <span className="relative z-10">About</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
               <Link
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className={`px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                className={`relative px-4 py-3 mx-2 rounded-lg text-base font-medium transition-all duration-300 hover-scale group overflow-hidden ${
                   isActive('/contact') 
-                    ? 'text-primary-600 bg-primary-50' 
-                    : 'text-gray-700 hover:text-primary-600 hover:bg-gray-50'
+                    ? 'text-blue-400 bg-gray-700/50' 
+                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
                 }`}
               >
-                Contact
+                <span className="relative z-10">Contact</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
               <Link
-                to="/contact"
+                to="/property-listing"
                 onClick={() => setIsOpen(false)}
-                className="bg-accent-500 hover:bg-accent-600 text-white px-6 py-2 rounded-lg font-medium transition-colors mx-3 text-center"
+                className={`relative px-4 py-3 mx-2 rounded-lg text-base font-medium transition-all duration-300 hover-scale group overflow-hidden ${
+                  isActive('/property-listing') 
+                    ? 'text-blue-400 bg-gray-700/50' 
+                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
+                }`}
               >
-                Get My Offer
+                <span className="relative z-10">Property Listings</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
+
             </div>
           </div>
         )}
