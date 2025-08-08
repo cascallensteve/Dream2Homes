@@ -7,8 +7,12 @@ const Contact = () => {
     email: '',
     phone: '',
     message: '',
-    propertyType: 'selling'
+    propertyType: 'wholesaling'
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
+  const [submitMessage, setSubmitMessage] = useState('');
 
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
@@ -35,9 +39,57 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    // Reset previous status
+    setSubmitStatus(null);
+    setSubmitMessage('');
+    setIsSubmitting(true);
+
+    try {
+      // Send form data to Google Apps Script
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbwjy4YpuI5Czd8_3hdHQdkpLKrpjT44R-jzNRvFAr1fZZzvimAW5hMsxXI2_tjKSG9l/exec';
+      
+      // Create JSON payload that matches your Google Apps Script
+      const jsonData = {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        propertyType: formData.propertyType
+      };
+
+      const response = await fetch(scriptUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(jsonData),
+        mode: 'no-cors' // Required for Google Apps Script
+      });
+
+      // Since we're using no-cors mode, we can't read the response
+      // But if we reach this point, the request was sent successfully
+      setSubmitStatus('success');
+      setSubmitMessage('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.');
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+        propertyType: 'wholesaling'
+      });
+      
+    } catch (error) {
+      console.error('Error sending message:', error);
+      setSubmitStatus('error');
+      setSubmitMessage('Sorry, there was an error sending your message. Please try again or call us directly at (817) 653-9233.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -82,7 +134,7 @@ const Contact = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animate-delay-400">
-            Ready to buy, sell, or invest? Our team is here to guide you through every step of the process with engineering precision and modern innovation.
+            Let's talk! Whether you're ready to sell, need a property manager, or want to explore short-term rental income — we're here to help.
           </p>
           
           {/* Contact Stats */}
@@ -114,7 +166,7 @@ const Contact = () => {
                   Get In Touch
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed animate-fade-in-left animate-delay-200">
-                  Ready to transform your real estate experience? Our team is here to help you achieve your goals.
+                  Dreams start with action. Let us help you make the move. We're based in the Dallas-Fort Worth area and ready to assist with all your real estate needs.
                 </p>
               </div>
 
@@ -205,10 +257,10 @@ const Contact = () => {
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     >
-                      <option value="selling">Selling Property</option>
-                      <option value="buying">Buying Property</option>
-                      <option value="investing">Real Estate Investment</option>
+                      <option value="wholesaling">Wholesaling</option>
                       <option value="management">Property Management</option>
+                      <option value="short-term">Short-Term Rentals</option>
+                      <option value="general">General Real Estate Solutions</option>
                     </select>
                   </div>
                 </div>
@@ -222,14 +274,52 @@ const Contact = () => {
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
                     placeholder="Tell us about your real estate needs..."
+                    required
                   ></textarea>
                 </div>
 
+                {/* Status Message */}
+                {submitStatus && (
+                  <div className={`p-4 rounded-lg transition-all duration-300 ${
+                    submitStatus === 'success' 
+                      ? 'bg-green-50 border border-green-200 text-green-800' 
+                      : 'bg-red-50 border border-red-200 text-red-800'
+                  }`}>
+                    <div className="flex items-center">
+                      {submitStatus === 'success' ? (
+                        <svg className="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                      ) : (
+                        <svg className="w-5 h-5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                        </svg>
+                      )}
+                      <span className="text-sm font-medium">{submitMessage}</span>
+                    </div>
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1"
+                  disabled={isSubmitting}
+                  className={`w-full py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center ${
+                    isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed' 
+                      : 'bg-blue-600 hover:bg-blue-700 hover:-translate-y-1'
+                  } text-white`}
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Sending Message...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
                 </button>
               </form>
             </div>

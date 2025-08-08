@@ -13,6 +13,10 @@ const PropertyListing = () => {
     propertyDetails: ''
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', null
+  const [submitMessage, setSubmitMessage] = useState('');
+
   const [currentImage, setCurrentImage] = useState(0);
   const images = [
     'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
@@ -38,9 +42,71 @@ const PropertyListing = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    
+    // Reset previous status
+    setSubmitStatus(null);
+    setSubmitMessage('');
+    setIsSubmitting(true);
+
+    try {
+      // Send form data to Google Apps Script
+      const scriptUrl = 'https://script.google.com/macros/s/AKfycbyAXHRLepD3kpKc7dA9_8U2tKfY571SpROcL3ghPpwq0kfKwXl6k6QhGhaJ_3M-orYwUw/exec';
+      
+      // Create JSON payload that matches your Google Apps Script
+      const jsonData = {
+        userType: formData.userType,
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        propertyAddress: formData.propertyAddress,
+        contactMethod: formData.contactMethod,
+        propertyDetails: formData.propertyDetails,
+        formType: 'property-listing' // To differentiate from contact form
+      };
+
+      // Log the data being sent for debugging
+      console.log('Sending property listing data:', jsonData);
+
+      const response = await fetch(scriptUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(jsonData),
+        mode: 'no-cors' // Required for Google Apps Script
+      });
+
+      console.log('Request sent successfully to Google Apps Script');
+
+      // Since we're using no-cors mode, we can't read the response
+      // But if we reach this point, the request was sent successfully
+      setSubmitStatus('success');
+      setSubmitMessage(
+        formData.userType === 'seller' 
+          ? 'Thank you! We\'ve received your property information. Our team will review your property and get back to you with a cash offer within 24 hours.'
+          : 'Thank you! We\'ve received your buyer inquiry. Our team will contact you within 24 hours with available properties that match your criteria.'
+      );
+      
+      // Reset form
+      setFormData({
+        userType: 'seller',
+        fullName: '',
+        email: '',
+        phone: '',
+        propertyAddress: '',
+        contactMethod: 'email',
+        propertyDetails: ''
+      });
+      
+    } catch (error) {
+      console.error('Error sending property listing:', error);
+      setSubmitStatus('error');
+      setSubmitMessage('Sorry, there was an error processing your request. Please try again or call us directly at (817) 653-9233.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -294,11 +360,67 @@ const PropertyListing = () => {
                   ></textarea>
                 </div>
 
+                {/* Status Message */}
+                {submitStatus && (
+                  <div className={`p-6 rounded-2xl transition-all duration-300 ${
+                    submitStatus === 'success' 
+                      ? 'bg-green-50 border-2 border-green-200' 
+                      : 'bg-red-50 border-2 border-red-200'
+                  }`}>
+                    <div className="flex items-start">
+                      {submitStatus === 'success' ? (
+                        <div className="flex-shrink-0">
+                          <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
+                            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      ) : (
+                        <div className="flex-shrink-0">
+                          <div className="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center">
+                            <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        </div>
+                      )}
+                      <div className="ml-4">
+                        <h3 className={`text-lg font-semibold mb-2 ${
+                          submitStatus === 'success' ? 'text-green-800' : 'text-red-800'
+                        }`}>
+                          {submitStatus === 'success' ? 'Success!' : 'Error'}
+                        </h3>
+                        <p className={`text-sm leading-relaxed ${
+                          submitStatus === 'success' ? 'text-green-700' : 'text-red-700'
+                        }`}>
+                          {submitMessage}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 <button 
                   type="submit"
-                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 hover:shadow-xl hover:-translate-y-1 text-lg"
+                  disabled={isSubmitting}
+                  className={`w-full font-bold py-4 px-6 rounded-xl transition-all duration-300 text-lg flex items-center justify-center ${
+                    isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed' 
+                      : 'bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 hover:shadow-xl hover:-translate-y-1'
+                  } text-white`}
                 >
-                  Get My Cash Offer
+                  {isSubmitting ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-3 h-6 w-6 text-white" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      {formData.userType === 'seller' ? 'Processing Your Property...' : 'Processing Your Request...'}
+                    </>
+                  ) : (
+                    formData.userType === 'seller' ? 'Get My Cash Offer' : 'Find Properties for Me'
+                  )}
                 </button>
 
                 <p className="text-xs text-gray-500 text-center">
@@ -402,7 +524,7 @@ const PropertyListing = () => {
               Why Choose Dreams2Home?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We make selling your property simple, fast, and profitable with our engineering-powered approach.
+              We make selling your property simple, fast, and profitable with our comprehensive real estate solutions.
             </p>
           </div>
           

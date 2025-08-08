@@ -70,7 +70,7 @@ const Home = () => {
                     <div className="relative inline-block">
                       <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl opacity-90 text-white font-medium">
                         <span className="relative">
-                          Real Estate Solutions
+                          Turning Dreams into Doors — Real Estate Made Simple
                     {/* Curved underline */}
                     <svg 
                             className="absolute -bottom-1 left-0 w-full h-3 lg:h-4 animate-pulse" 
@@ -101,15 +101,19 @@ const Home = () => {
                 <div className="space-y-3 lg:space-y-4 animate-fade-in-up animate-delay-500">
                   <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
                         <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                    <span className="text-sm lg:text-lg">21st Century Landlord Solutions</span>
+                    <span className="text-sm lg:text-lg">Wholesaling high-potential properties</span>
                   </div>
                   <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
                         <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-blue-400 rounded-full animate-pulse animate-delay-200"></div>
-                    <span className="text-sm lg:text-lg">Engineering-Powered Management</span>
+                    <span className="text-sm lg:text-lg">Property management that gives you peace of mind</span>
                   </div>
                   <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
                         <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-blue-400 rounded-full animate-pulse animate-delay-400"></div>
-                    <span className="text-sm lg:text-lg">Hands-Off Property Investment</span>
+                    <span className="text-sm lg:text-lg">Short-term rentals that maximize ROI</span>
+                  </div>
+                  <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
+                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-blue-400 rounded-full animate-pulse animate-delay-600"></div>
+                    <span className="text-sm lg:text-lg">General real estate solutions customized for your needs</span>
                   </div>
                 </div>
 
@@ -170,7 +174,7 @@ const Home = () => {
               ></span>
             </div>
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in-up animate-delay-500">
-              Our platform seamlessly connects motivated sellers with qualified buyers, creating win-win opportunities for everyone involved.
+              At Dreams2Home, we believe everyone deserves access to smart, simple, and profitable real estate solutions. Explore. Invest. Stay. Manage. We handle it all — professionally and personally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animate-delay-700">
               <div className="flex items-center space-x-2 text-blue-400">
@@ -498,7 +502,7 @@ const Home = () => {
                 </span>
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-300">
-                We're equally excited about real estate opportunities. Our mission is to provide quality property solutions through innovative technology and personalized service for both buyers and sellers.
+                At Dreams2Home, our mission is to bridge the gap between property and opportunity. We help clients unlock the true value of real estate — whether that's through a quick sale, a smart rental strategy, or comprehensive property support.
               </p>
             </div>
 

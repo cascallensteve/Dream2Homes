@@ -40,7 +40,7 @@ const Navigation = () => {
                   : 'text-white hover:text-gray-300'
               }`}
             >
-              How it works
+              Home
             </Link>
             <Link
               to="/about"
@@ -51,6 +51,16 @@ const Navigation = () => {
               }`}
             >
               About Us
+            </Link>
+            <Link
+              to="/services"
+              className={`text-base font-medium transition-colors duration-300 ${
+                isActive('/services') 
+                  ? 'text-blue-400' 
+                  : 'text-white hover:text-gray-300'
+              }`}
+            >
+              Services
             </Link>
             <Link
               to="/contact"
@@ -128,6 +138,18 @@ const Navigation = () => {
                 }`}
               >
                 <span className="relative z-10">About</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </Link>
+              <Link
+                to="/services"
+                onClick={() => setIsOpen(false)}
+                className={`relative px-4 py-3 mx-2 rounded-lg text-base font-medium transition-all duration-300 hover-scale group overflow-hidden ${
+                  isActive('/services') 
+                    ? 'text-blue-400 bg-gray-700/50' 
+                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
+                }`}
+              >
+                <span className="relative z-10">Services</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
               <Link
