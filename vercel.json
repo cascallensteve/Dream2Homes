@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd Dream2Homes && npm run build",
+  "buildCommand": "cd Dream2Homes && npm install && npm run build",
   "outputDirectory": "Dream2Homes/dist",
   "framework": null,
   "rewrites": [
