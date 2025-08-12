@@ -41,7 +41,7 @@ const Home = () => {
         <div
           className="absolute inset-0 w-full h-full z-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(26, 35, 126, 0.5), rgba(26, 35, 126, 0.5)), url('/people-office-work-day_mej1qi.webp')`,
+            backgroundImage: `linear-gradient(rgba(26, 35, 126, 0.5), rgba(26, 35, 126, 0.5)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -313,7 +313,7 @@ const Home = () => {
                          }}>
                       <div className="w-full h-full rounded-full overflow-hidden shadow-xl">
                         <img 
-                          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80"
+                          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1073&q=80"
                           alt="Happy property seller"
                           className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                         />
@@ -398,7 +398,7 @@ const Home = () => {
                          }}>
                       <div className="w-full h-full rounded-full overflow-hidden shadow-xl">
                         <img 
-                          src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+                          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1073&q=80"
                           alt="Property investor analyzing deals"
                           className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                         />
@@ -446,7 +446,7 @@ const Home = () => {
                 {/* Circular container with increased size */}
                 <div className="w-96 h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-full border-8 border-white/20 shadow-2xl overflow-hidden relative">
                   <img 
-                    src="https://res.cloudinary.com/djksfayfu/image/upload/v1753978629/woman-removebg-preview_wytppb.png"
+                    src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1073&q=80"
                     alt="Happy Dreams2Home team member"
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
