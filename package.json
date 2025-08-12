@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
-    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./public/styles.css --watch"
+    "build": "npm run build:css:prod && webpack --mode production",
+    "build:css": "tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/tailwind-compiled.css --watch",
+    "build:css:prod": "tailwindcss -i ./src/styles/tailwind.css -o ./src/styles/tailwind-compiled.css"
   },
   "dependencies": {
     "react": "^18.2.0",
