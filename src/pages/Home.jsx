@@ -36,16 +36,15 @@ const Home = () => {
     <div className="min-h-screen scroll-smooth transition-all duration-300 ease-in-out">
       {/* Hero Section */}
       <section
-        className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center justify-center bg-primary-900 pt-8 sm:pt-12 md:pt-16"
+        className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center bg-primary-900 pt-20"
       >
         <div
-          className="absolute inset-0 w-full h-full z-0"
+          className="absolute inset-0 w-full h-full z-0 animate-pulse"
           style={{
-            backgroundImage: `linear-gradient(rgba(20, 83, 45, 0.5), rgba(20, 83, 45, 0.5)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+            backgroundImage: `linear-gradient(rgba(20, 83, 45, 0.6), rgba(20, 83, 45, 0.6)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            filter: 'brightness(0.95)'
+            backgroundRepeat: 'no-repeat'
           }}
         ></div>
         <div className="relative z-10 w-full">
@@ -236,6 +235,19 @@ const Home = () => {
                 >
                   Property Buyers
                 </button>
+                <button 
+                  onClick={() => setActiveTab('management')}
+                  className={`px-10 py-4 rounded-xl font-semibold transition-all duration-300 transform-gpu ${
+                    activeTab === 'management' 
+                      ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg shadow-primary-500/25 scale-105' 
+                      : 'text-gray-300 hover:bg-gray-600/50 hover:text-white hover:scale-105'
+                  }`}
+                  style={{
+                    boxShadow: activeTab === 'management' ? '0 10px 25px -5px rgba(34, 197, 94, 0.5)' : 'none'
+                  }}
+                >
+                  Property Management
+                </button>
               </div>
             </div>
           </div>
@@ -388,25 +400,95 @@ const Home = () => {
                   </div>
                 </div>
 
-                {/* Right Image - Buyers with enhanced 3D effect */}
+                {/* Right Image - Property Buyers */}
                 <div className="flex justify-center lg:justify-end animate-fade-in">
                   <div className="relative transform-gpu hover:scale-105 transition-transform duration-500">
-                    <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full border-4 border-primary-500/50 p-3 backdrop-blur-sm shadow-2xl"
-                         style={{
-                           background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(147, 51, 234, 0.1))',
-                           boxShadow: '0 25px 50px -12px rgba(34, 197, 94, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
-                         }}>
-                      <div className="w-full h-full rounded-full overflow-hidden shadow-xl">
-                        <img 
-                          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1073&q=80"
-                          alt="Property investor analyzing deals"
-                          className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
-                        />
+                    <div className="bg-gradient-to-br from-primary-500/10 to-primary-600/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-400/30 shadow-2xl">
+                      <img 
+                        src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1755191509/smiley-couple-planning-redecorating-home-removebg-preview_xqlw4e.png"
+                        alt="Happy couple planning home improvements"
+                        className="w-full h-80 lg:h-96 object-contain hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-500 rounded-lg animate-bounce opacity-80 shadow-lg"></div>
+                  </div>
+                </div>
+              </>
+            )}
+
+            {/* Content for Property Management */}
+            {activeTab === 'management' && (
+              <>
+                {/* Left Content - Property Management */}
+                <div className="space-y-10 animate-fade-in">
+                  <div className="transform-gpu hover:scale-105 transition-transform duration-300">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
+                      Property Management
+                    </h2>
+                    <p className="text-xl text-gray-300 leading-relaxed">
+                      Maximize your rental income with professional management
+                    </p>
+                  </div>
+
+                  {/* Feature 1 - 3D Card */}
+                  <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl transform-gpu hover:scale-105 hover:-translate-y-2 transition-all duration-300"
+                       style={{
+                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                       }}>
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg shadow-primary-500/25 transform-gpu hover:rotate-12 transition-transform duration-300">
+                          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-3 text-primary-300">Full-Service Management.</h3>
+                        <p className="text-gray-300 leading-relaxed">
+                          From tenant screening to maintenance coordination, we handle every aspect of your property management needs with professional expertise.
+                        </p>
                       </div>
                     </div>
-                    <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full animate-bounce opacity-80 shadow-lg"></div>
-                    <div className="absolute -bottom-8 -left-8 w-12 h-12 bg-gradient-to-br from-primary-300 to-primary-400 rounded-full animate-float opacity-70 shadow-lg"></div>
-                    <div className="absolute top-1/4 -left-10 w-12 h-12 bg-primary-300 rounded-full animate-pulse opacity-70"></div>
+                  </div>
+
+                  {/* Primary accent line with 3D effect */}
+                  <div className="w-2 h-20 bg-gradient-to-b from-primary-500 to-primary-600 ml-7 rounded-full shadow-lg shadow-primary-500/25"></div>
+
+                  {/* Feature 2 - 3D Card */}
+                  <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl transform-gpu hover:scale-105 hover:-translate-y-2 transition-all duration-300"
+                       style={{
+                         boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                       }}>
+                    <div className="flex items-start space-x-4">
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg shadow-primary-500/25 transform-gpu hover:rotate-12 transition-transform duration-300">
+                          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-3 text-primary-300">Maximize ROI.</h3>
+                        <p className="text-gray-300 leading-relaxed">
+                          Our data-driven approach ensures optimal rental pricing and occupancy rates for maximum returns on your investment properties.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Image - Property Management */}
+                <div className="flex justify-center lg:justify-end animate-fade-in">
+                  <div className="relative transform-gpu hover:scale-105 transition-transform duration-500">
+                    <div className="bg-gradient-to-br from-primary-500/10 to-primary-600/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-400/30 shadow-2xl">
+                      <img 
+                        src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1755192318/portrait-african-young-businessman-businesswoman-looking-digital-tablet_1_xyx5tq.jpg"
+                        alt="Property management professional"
+                        className="w-full h-80 lg:h-96 object-cover rounded-xl hover:scale-105 transition-transform duration-700"
+                      />
+                    </div>
+                    <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-500 rounded-lg animate-bounce opacity-80 shadow-lg"></div>
                   </div>
                 </div>
               </>

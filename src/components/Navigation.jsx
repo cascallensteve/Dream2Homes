@@ -21,7 +21,7 @@ const Navigation = () => {
 
   return (
     <nav className="bg-black sticky top-0 z-50 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex justify-between h-20 lg:h-24">
           <div className="flex items-center">
             <Link to="/" className="flex items-center group">
@@ -114,8 +114,8 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden pb-6 bg-gray-800/95 backdrop-blur-md rounded-b-lg border-t border-gray-700 animate-fade-in-down">
-            <div className="flex flex-col space-y-2 pt-4 stagger-children">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-700 animate-fade-in-down shadow-2xl z-50">
+            <div className="flex flex-col space-y-2 pt-4 pb-6 px-4 stagger-children">
               <Link
                 to="/"
                 onClick={() => setIsOpen(false)}

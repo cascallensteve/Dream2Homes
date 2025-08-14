@@ -234,23 +234,75 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl mb-8 animate-fade-in-up animate-delay-200">
-            Let's talk! Whether you're ready to sell, need a property manager, or want to explore short-term rental income — we're here to help.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center bg-white hover:bg-gray-100 text-blue-600 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group"
-          >
-            <span className="group-hover:scale-105 transition-transform duration-300">Contact Us Today</span>
-            <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+      <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+        <div className="max-w-7xl mx-auto px-4">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl mb-8 animate-fade-in-up animate-delay-200 max-w-3xl mx-auto">
+              Let's talk! Whether you're ready to sell, need a property manager, or want to explore short-term rental income — we're here to help.
+            </p>
+          </div>
+
+          {/* Three Images Grid */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12 animate-fade-in-up animate-delay-400">
+            {/* Image 1 - Property Selling */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+              <img 
+                src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Property selling consultation"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h3 className="text-lg font-bold text-white mb-2">Sell Your Property</h3>
+                <p className="text-sm text-white/90">Get the best cash offer for your home</p>
+              </div>
+            </div>
+
+            {/* Image 2 - Property Management */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Property management services"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h3 className="text-lg font-bold text-white mb-2">Property Management</h3>
+                <p className="text-sm text-white/90">Professional management for maximum returns</p>
+              </div>
+            </div>
+
+            {/* Image 3 - Investment Opportunities */}
+            <div className="group relative overflow-hidden rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+              <img 
+                src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Real estate investment opportunities"
+                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <h3 className="text-lg font-bold text-white mb-2">Investment Opportunities</h3>
+                <p className="text-sm text-white/90">Exclusive off-market property deals</p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center bg-white hover:bg-gray-100 text-primary-600 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group"
+            >
+              <span className="group-hover:scale-105 transition-transform duration-300">Contact Us Today</span>
+              <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
     </div>

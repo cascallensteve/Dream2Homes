@@ -13,7 +13,7 @@ const Logo = ({ size = 'default', className = '' }) => {
   return (
     <div className={`flex items-center ${className}`}>
       <img
-        src="/logo.png"
+        src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1755184581/Dreams_G16_zqvikm.png"
         alt="Dreams2Home Logo"
         className={`${sizeClasses[size]} object-contain`}
         onError={(e) => {
