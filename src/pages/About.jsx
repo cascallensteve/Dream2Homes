@@ -140,6 +140,52 @@ const About = () => {
         </div>
       </section>
 
+      {/* Leadership Team Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-8 animate-fade-in-up">
+              Meet Our Leadership Team
+            </h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animate-delay-200">
+              Led by industry engineers with deep technical expertise and real estate acumen
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            {/* Joshua */}
+            <div className="text-center bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-2xl animate-fade-in-left">
+              <div className="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <span className="text-2xl font-bold text-white">J</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Joshua</h3>
+              <p className="text-primary-600 font-semibold mb-4">Co-Founder & Engineering Lead</p>
+              <p className="text-gray-600 leading-relaxed">
+                Industry engineer with extensive experience in system optimization and process automation. Joshua brings technical innovation to real estate operations, ensuring efficient and scalable solutions for all client needs.
+              </p>
+            </div>
+
+            {/* Dorian */}
+            <div className="text-center bg-gradient-to-br from-primary-50 to-primary-100 p-8 rounded-2xl animate-fade-in-right">
+              <div className="w-24 h-24 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <span className="text-2xl font-bold text-white">D</span>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Dorian</h3>
+              <p className="text-primary-600 font-semibold mb-4">Co-Founder & Strategy Director</p>
+              <p className="text-gray-600 leading-relaxed">
+                Industry engineer specializing in strategic planning and market analysis. Dorian combines engineering precision with real estate expertise to deliver data-driven solutions and exceptional client outcomes.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Together, Joshua and Dorian leverage their engineering backgrounds to revolutionize real estate processes, bringing unprecedented efficiency, transparency, and innovation to every transaction.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="max-w-4xl mx-auto text-center px-4">

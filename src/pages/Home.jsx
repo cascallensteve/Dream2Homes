@@ -36,12 +36,12 @@ const Home = () => {
     <div className="min-h-screen scroll-smooth transition-all duration-300 ease-in-out">
       {/* Hero Section */}
       <section
-        className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center justify-center bg-blue-900 pt-8 sm:pt-12 md:pt-16"
+        className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center justify-center bg-primary-900 pt-8 sm:pt-12 md:pt-16"
       >
         <div
           className="absolute inset-0 w-full h-full z-0"
           style={{
-            backgroundImage: `linear-gradient(rgba(26, 35, 126, 0.5), rgba(26, 35, 126, 0.5)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
+            backgroundImage: `linear-gradient(rgba(20, 83, 45, 0.5), rgba(20, 83, 45, 0.5)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
@@ -51,10 +51,10 @@ const Home = () => {
         <div className="relative z-10 w-full">
         {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full animate-float"></div>
-            <div className="absolute top-40 right-20 w-20 h-20 bg-blue-500/10 rounded-full animate-pulse animate-delay-300"></div>
-            <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-blue-500/10 rounded-full animate-bounce animate-delay-700"></div>
-            <div className="absolute bottom-20 right-1/3 w-16 h-16 bg-blue-500/10 rounded-full animate-float animate-delay-1000"></div>
+            <div className="absolute top-20 left-10 w-32 h-32 bg-primary-500/10 rounded-full animate-float"></div>
+            <div className="absolute top-40 right-20 w-20 h-20 bg-primary-500/10 rounded-full animate-pulse animate-delay-300"></div>
+            <div className="absolute bottom-40 left-1/4 w-24 h-24 bg-primary-500/10 rounded-full animate-bounce animate-delay-700"></div>
+            <div className="absolute bottom-20 right-1/3 w-16 h-16 bg-primary-500/10 rounded-full animate-float animate-delay-1000"></div>
         </div>
 
         <div className="absolute inset-0 flex items-center">
@@ -63,12 +63,12 @@ const Home = () => {
               {/* Left Side - Animated Content */}
               <div className="space-y-6 lg:space-y-8 animate-fade-in-left">
                 <div className="space-y-3 lg:space-y-4">
-                  <h1 className="hero-text text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-blue-400 leading-tight">
+                  <h1 className="hero-text text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary-400 leading-tight">
                     Dreams2Home
                   </h1>
                   <div className="hero-text animate-fade-in-up animate-delay-300">
                     <div className="relative inline-block">
-                      <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl opacity-90 text-white font-medium">
+                      <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl opacity-90 text-primary-100 font-medium">
                         <span className="relative">
                           Turning Dreams into Doors — Real Estate Made Simple
                     {/* Curved underline */}
@@ -85,9 +85,9 @@ const Home = () => {
                       />
                       <defs>
                         <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                    <stop offset="0%" stopColor="#64B5F6" />
-                                    <stop offset="50%" stopColor="#90CAF9" />
-                                    <stop offset="100%" stopColor="#64B5F6" />
+                                    <stop offset="0%" stopColor="#22c55e" />
+                                    <stop offset="50%" stopColor="#4ade80" />
+                                    <stop offset="100%" stopColor="#22c55e" />
                         </linearGradient>
                       </defs>
                     </svg>
@@ -100,19 +100,19 @@ const Home = () => {
                 {/* Animated Features */}
                 <div className="space-y-3 lg:space-y-4 animate-fade-in-up animate-delay-500">
                   <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
-                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-primary-400 rounded-full animate-pulse"></div>
                     <span className="text-sm lg:text-lg">Wholesaling high-potential properties</span>
                   </div>
                   <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
-                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-blue-400 rounded-full animate-pulse animate-delay-200"></div>
+                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-primary-400 rounded-full animate-pulse animate-delay-200"></div>
                     <span className="text-sm lg:text-lg">Property management that gives you peace of mind</span>
                   </div>
                   <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
-                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-blue-400 rounded-full animate-pulse animate-delay-400"></div>
+                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-primary-400 rounded-full animate-pulse animate-delay-400"></div>
                     <span className="text-sm lg:text-lg">Short-term rentals that maximize ROI</span>
                   </div>
                   <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
-                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-blue-400 rounded-full animate-pulse animate-delay-600"></div>
+                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-primary-400 rounded-full animate-pulse animate-delay-600"></div>
                     <span className="text-sm lg:text-lg">General real estate solutions customized for your needs</span>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ const Home = () => {
                 <div className="animate-fade-in-up animate-delay-700">
                   <Link
                     to="/about"
-                        className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 lg:px-8 py-3 lg:py-4 rounded-full font-semibold text-base lg:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group"
+                        className="inline-flex items-center bg-primary-600 hover:bg-primary-700 text-white px-3 lg:px-8 py-3 lg:py-4 rounded-full font-semibold text-base lg:text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group"
                   >
                     <span className="group-hover:scale-105 transition-transform duration-300">Learn More</span>
                     <svg className="w-4 h-4 lg:w-5 lg:h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,14 +135,14 @@ const Home = () => {
               <div className="flex justify-center lg:justify-end animate-fade-in-right">
                 <div className="hero-text bg-white/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-white/20 hover-lift animate-morph max-w-sm">
                   <div className="text-center space-y-3 lg:space-y-4">
-                                      <div className="w-20 h-20 lg:w-24 lg:h-24 bg-blue-600 rounded-full flex items-center justify-center animate-heartbeat mx-auto">
-                  <svg className="w-10 h-10 lg:w-12 lg:h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                      <div className="w-20 h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center animate-heartbeat mx-auto">
+                  <svg className="w-10 h-10 lg:w-12 lg:h-12 text-primary-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
                     <div>
-                      <div className="text-base lg:text-lg font-semibold text-white">Free Consultation</div>
-                      <div className="text-xl lg:text-3xl font-bold text-glow">(817) 653-9233</div>
+                      <div className="text-base lg:text-lg font-semibold text-primary-200 hover:text-primary-300">Free Consultation</div>
+                      <a href="tel:8176539233" className="text-xl lg:text-3xl font-bold text-glow text-primary-200/80 hover:text-primary-300 transition-colors cursor-pointer">(817) 653-9233</a>
                     </div>
                   </div>
                 </div>
@@ -157,9 +157,9 @@ const Home = () => {
       <section className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/20 rounded-full animate-float"></div>
-          <div className="absolute bottom-20 right-20 w-40 h-40 bg-blue-500/20 rounded-full animate-pulse animate-delay-500"></div>
-          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-blue-500/20 rounded-full animate-bounce animate-delay-1000"></div>
+          <div className="absolute top-20 left-10 w-32 h-32 bg-primary-500/20 rounded-full animate-float"></div>
+          <div className="absolute bottom-20 right-20 w-40 h-40 bg-primary-500/20 rounded-full animate-pulse animate-delay-500"></div>
+          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-primary-500/20 rounded-full animate-bounce animate-delay-1000"></div>
         </div>
         
         <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
@@ -170,23 +170,23 @@ const Home = () => {
             <div className="h-20 md:h-24 flex items-center justify-center">
               <span 
                 ref={typedRef}
-                className="text-2xl md:text-3xl lg:text-4xl font-semibold text-blue-400 leading-relaxed"
+                className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-400 leading-relaxed"
               ></span>
             </div>
             <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in-up animate-delay-500">
               At Dreams2Home, we believe everyone deserves access to smart, simple, and profitable real estate solutions. Explore. Invest. Stay. Manage. We handle it all — professionally and personally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animate-delay-700">
-              <div className="flex items-center space-x-2 text-blue-400">
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+              <div className="flex items-center space-x-2 text-primary-400">
+                <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse"></div>
                 <span className="text-sm md:text-base">Direct Connections</span>
               </div>
-              <div className="flex items-center space-x-2 text-blue-400">
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse animate-delay-200"></div>
+              <div className="flex items-center space-x-2 text-primary-400">
+                <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse animate-delay-200"></div>
                 <span className="text-sm md:text-base">Fast Transactions</span>
               </div>
-              <div className="flex items-center space-x-2 text-blue-400">
-                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse animate-delay-400"></div>
+              <div className="flex items-center space-x-2 text-primary-400">
+                <div className="w-2 h-2 bg-primary-400 rounded-full animate-pulse animate-delay-400"></div>
                 <span className="text-sm md:text-base">Maximum Value</span>
               </div>
             </div>
@@ -214,11 +214,11 @@ const Home = () => {
                   onClick={() => setActiveTab('sellers')}
                   className={`px-10 py-4 rounded-xl font-semibold transition-all duration-300 transform-gpu ${
                     activeTab === 'sellers' 
-                      ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-500/25 scale-105' 
+                      ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg shadow-primary-500/25 scale-105' 
                       : 'text-gray-300 hover:bg-gray-600/50 hover:text-white hover:scale-105'
                   }`}
                   style={{
-                    boxShadow: activeTab === 'sellers' ? '0 10px 25px -5px rgba(100, 181, 246, 0.5)' : 'none'
+                    boxShadow: activeTab === 'sellers' ? '0 10px 25px -5px rgba(34, 197, 94, 0.5)' : 'none'
                   }}
                 >
                   Property Sellers
@@ -227,11 +227,11 @@ const Home = () => {
                   onClick={() => setActiveTab('buyers')}
                   className={`px-10 py-4 rounded-xl font-semibold transition-all duration-300 transform-gpu ${
                     activeTab === 'buyers' 
-                      ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg shadow-blue-500/25 scale-105' 
+                      ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg shadow-primary-500/25 scale-105' 
                       : 'text-gray-300 hover:bg-gray-600/50 hover:text-white hover:scale-105'
                   }`}
                   style={{
-                    boxShadow: activeTab === 'buyers' ? '0 10px 25px -5px rgba(100, 181, 246, 0.5)' : 'none'
+                    boxShadow: activeTab === 'buyers' ? '0 10px 25px -5px rgba(34, 197, 94, 0.5)' : 'none'
                   }}
                 >
                   Property Buyers
@@ -247,7 +247,7 @@ const Home = () => {
                 {/* Left Content - Sellers with 3D cards */}
                 <div className="space-y-10 animate-fade-in">
                   <div className="transform-gpu hover:scale-105 transition-transform duration-300">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
                       For Property Sellers
                     </h2>
                     <p className="text-xl text-gray-300 leading-relaxed">
@@ -262,14 +262,14 @@ const Home = () => {
                        }}>
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/25 transform-gpu hover:rotate-12 transition-transform duration-300">
+                        <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg shadow-primary-500/25 transform-gpu hover:rotate-12 transition-transform duration-300">
                           <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                           </svg>
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-3 text-blue-300">Get Your Best Offer, Set Your Terms.</h3>
+                        <h3 className="text-xl font-semibold mb-3 text-primary-300">Get Your Best Offer, Set Your Terms.</h3>
                         <p className="text-gray-300 leading-relaxed">
                           Connect with multiple cash buyers and get competitive offers. You control the timeline and closing terms that work best for your situation.
                         </p>
@@ -277,8 +277,8 @@ const Home = () => {
                     </div>
                   </div>
 
-                  {/* Blue accent line with 3D effect */}
-                  <div className="w-2 h-20 bg-gradient-to-b from-blue-500 to-blue-600 ml-7 rounded-full shadow-lg shadow-blue-500/25"></div>
+                  {/* Primary accent line with 3D effect */}
+                  <div className="w-2 h-20 bg-gradient-to-b from-primary-500 to-primary-600 ml-7 rounded-full shadow-lg shadow-primary-500/25"></div>
 
                   {/* Feature 2 - 3D Card */}
                   <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl transform-gpu hover:scale-105 hover:-translate-y-2 transition-all duration-300"
@@ -287,14 +287,14 @@ const Home = () => {
                        }}>
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/25 transform-gpu hover:rotate-12 transition-transform duration-300">
+                        <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg shadow-primary-500/25 transform-gpu hover:rotate-12 transition-transform duration-300">
                           <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3a4 4 0 118 0v4m-8 0h8a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V9a2 2 0 012-2z" />
                           </svg>
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-3 text-blue-300">Streamlined Process, Maximum Results.</h3>
+                        <h3 className="text-xl font-semibold mb-3 text-primary-300">Streamlined Process, Maximum Results.</h3>
                         <p className="text-gray-300 leading-relaxed">
                           Our engineering-powered approach ensures efficient transactions with professional expertise and transparent communication throughout the entire process.
                         </p>
@@ -306,10 +306,10 @@ const Home = () => {
                 {/* Right Image - Sellers with enhanced 3D effect */}
                 <div className="flex justify-center lg:justify-end animate-fade-in">
                   <div className="relative transform-gpu hover:scale-105 transition-transform duration-500">
-                    <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full border-4 border-blue-500/50 p-3 backdrop-blur-sm shadow-2xl"
+                    <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full border-4 border-primary-500/50 p-3 backdrop-blur-sm shadow-2xl"
                          style={{
-                           background: 'linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(147, 51, 234, 0.1))',
-                           boxShadow: '0 25px 50px -12px rgba(100, 181, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                           background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(147, 51, 234, 0.1))',
+                           boxShadow: '0 25px 50px -12px rgba(34, 197, 94, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                          }}>
                       <div className="w-full h-full rounded-full overflow-hidden shadow-xl">
                         <img 
@@ -319,8 +319,8 @@ const Home = () => {
                         />
                       </div>
                     </div>
-                    <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full animate-bounce opacity-80 shadow-lg shadow-blue-500/25"></div>
-                    <div className="absolute -bottom-8 -left-8 w-12 h-12 bg-gradient-to-br from-blue-300 to-blue-400 rounded-full animate-float opacity-70 shadow-lg shadow-blue-300/25"></div>
+                    <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full animate-bounce opacity-80 shadow-lg shadow-primary-500/25"></div>
+                    <div className="absolute -bottom-8 -left-8 w-12 h-12 bg-gradient-to-br from-primary-300 to-primary-400 rounded-full animate-float opacity-70 shadow-lg shadow-primary-300/25"></div>
                   </div>
                 </div>
               </>
@@ -332,7 +332,7 @@ const Home = () => {
                 {/* Left Content - Buyers with 3D cards */}
                 <div className="space-y-10 animate-fade-in">
                   <div className="transform-gpu hover:scale-105 transition-transform duration-300">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent">
                       For Property Buyers
                     </h2>
                     <p className="text-xl text-gray-300 leading-relaxed">
@@ -347,14 +347,14 @@ const Home = () => {
                        }}>
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/25 transform-gpu hover:rotate-12 transition-transform duration-300">
+                        <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg shadow-primary-500/25 transform-gpu hover:rotate-12 transition-transform duration-300">
                           <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                           </svg>
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-3 text-blue-300">Access Exclusive Off-Market Properties.</h3>
+                        <h3 className="text-xl font-semibold mb-3 text-primary-300">Access Exclusive Off-Market Properties.</h3>
                         <p className="text-gray-300 leading-relaxed">
                           Get first access to properties before they hit the MLS. Find motivated sellers and wholesale deals not available to the general public.
                         </p>
@@ -362,8 +362,8 @@ const Home = () => {
                     </div>
                   </div>
 
-                  {/* Blue accent line with 3D effect */}
-                  <div className="w-2 h-20 bg-gradient-to-b from-blue-500 to-blue-600 ml-7 rounded-full shadow-lg shadow-blue-500/25"></div>
+                  {/* Primary accent line with 3D effect */}
+                  <div className="w-2 h-20 bg-gradient-to-b from-primary-500 to-primary-600 ml-7 rounded-full shadow-lg shadow-primary-500/25"></div>
 
                   {/* Feature 2 - 3D Card */}
                   <div className="bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 shadow-2xl transform-gpu hover:scale-105 hover:-translate-y-2 transition-all duration-300"
@@ -372,14 +372,14 @@ const Home = () => {
                        }}>
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/25 transform-gpu hover:rotate-12 transition-transform duration-300">
+                        <div className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center shadow-lg shadow-primary-500/25 transform-gpu hover:rotate-12 transition-transform duration-300">
                           <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                           </svg>
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold mb-3 text-blue-300">Fast closings with verified deals.</h3>
+                        <h3 className="text-xl font-semibold mb-3 text-primary-300">Fast closings with verified deals.</h3>
                         <p className="text-gray-300 leading-relaxed">
                           All properties are pre-screened and verified. Close faster with motivated sellers who want quick, cash transactions.
                         </p>
@@ -391,10 +391,10 @@ const Home = () => {
                 {/* Right Image - Buyers with enhanced 3D effect */}
                 <div className="flex justify-center lg:justify-end animate-fade-in">
                   <div className="relative transform-gpu hover:scale-105 transition-transform duration-500">
-                    <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full border-4 border-blue-500/50 p-3 backdrop-blur-sm shadow-2xl"
+                    <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full border-4 border-primary-500/50 p-3 backdrop-blur-sm shadow-2xl"
                          style={{
-                           background: 'linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(147, 51, 234, 0.1))',
-                           boxShadow: '0 25px 50px -12px rgba(100, 181, 246, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
+                           background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(147, 51, 234, 0.1))',
+                           boxShadow: '0 25px 50px -12px rgba(34, 197, 94, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
                          }}>
                       <div className="w-full h-full rounded-full overflow-hidden shadow-xl">
                         <img 
@@ -404,9 +404,9 @@ const Home = () => {
                         />
                       </div>
                     </div>
-                    <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-500 rounded-full animate-bounce opacity-80 shadow-lg"></div>
-                    <div className="absolute -bottom-8 -left-8 w-12 h-12 bg-gradient-to-br from-blue-300 to-blue-400 rounded-full animate-float opacity-70 shadow-lg"></div>
-                    <div className="absolute top-1/4 -left-10 w-12 h-12 bg-blue-300 rounded-full animate-pulse opacity-70"></div>
+                    <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full animate-bounce opacity-80 shadow-lg"></div>
+                    <div className="absolute -bottom-8 -left-8 w-12 h-12 bg-gradient-to-br from-primary-300 to-primary-400 rounded-full animate-float opacity-70 shadow-lg"></div>
+                    <div className="absolute top-1/4 -left-10 w-12 h-12 bg-primary-300 rounded-full animate-pulse opacity-70"></div>
                   </div>
                 </div>
               </>
@@ -415,8 +415,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Get to Know Us Section - Blue CTA */}
-      <section className="py-16 bg-gradient-to-r from-blue-400 to-blue-500 relative overflow-hidden transition-all duration-500">
+      {/* Get to Know Us Section - Green CTA */}
+      <section className="py-16 bg-gradient-to-r from-green-400 to-green-500 relative overflow-hidden transition-all duration-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -453,12 +453,12 @@ const Home = () => {
                 </div>
                 
                 {/* Gradient overlay below the image */}
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-80 h-16 bg-gradient-to-t from-blue-600/20 to-transparent rounded-full blur-xl"></div>
+                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-80 h-16 bg-gradient-to-t from-green-600/20 to-transparent rounded-full blur-xl"></div>
                 
                 {/* Floating decorative elements */}
-                <div className="absolute -top-6 -right-6 w-20 h-20 bg-blue-400 rounded-full animate-bounce opacity-80 shadow-lg"></div>
+                <div className="absolute -top-6 -right-6 w-20 h-20 bg-green-400 rounded-full animate-bounce opacity-80 shadow-lg"></div>
                 <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-white rounded-full animate-float opacity-90 shadow-lg"></div>
-                <div className="absolute top-1/4 -left-10 w-12 h-12 bg-blue-300 rounded-full animate-pulse opacity-70"></div>
+                <div className="absolute top-1/4 -left-10 w-12 h-12 bg-green-300 rounded-full animate-pulse opacity-70"></div>
               </div>
             </div>
           </div>
@@ -470,12 +470,12 @@ const Home = () => {
       </section>
 
       {/* Best Real Estate Business Section - Full Page Redesign */}
-      <section className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-800 relative overflow-hidden">
+      <section className="min-h-screen bg-gradient-to-br from-gray-900 via-primary-900 to-gray-800 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500/10 rounded-full animate-float blur-3xl"></div>
-          <div className="absolute bottom-20 right-20 w-80 h-80 bg-blue-400/10 rounded-full animate-pulse animate-delay-500 blur-3xl"></div>
-          <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-blue-300/10 rounded-full animate-bounce animate-delay-1000 blur-2xl"></div>
+          <div className="absolute top-20 left-10 w-64 h-64 bg-primary-500/10 rounded-full animate-float blur-3xl"></div>
+          <div className="absolute bottom-20 right-20 w-80 h-80 bg-primary-400/10 rounded-full animate-pulse animate-delay-500 blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-primary-300/10 rounded-full animate-bounce animate-delay-1000 blur-2xl"></div>
           <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-white/5 rounded-full animate-float animate-delay-1500 blur-xl"></div>
         </div>
 
@@ -491,13 +491,13 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 py-20">
             {/* Header Section */}
             <div className="text-center mb-20">
-              <div className="inline-flex items-center px-6 py-3 bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 rounded-full text-blue-300 text-sm font-medium mb-8 animate-fade-in">
-                <span className="w-2 h-2 bg-blue-400 rounded-full mr-3 animate-pulse"></span>
+              <div className="inline-flex items-center px-6 py-3 bg-primary-500/20 backdrop-blur-sm border border-primary-400/30 rounded-full text-primary-300 text-sm font-medium mb-8 animate-fade-in">
+                <span className="w-2 h-2 bg-primary-400 rounded-full mr-3 animate-pulse"></span>
                 #1 Real Estate Solutions Provider
               </div>
               <h2 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight animate-fade-in-up">
                 Best Real Estate
-                <span className="block bg-gradient-to-r from-blue-400 via-white to-blue-400 bg-clip-text text-transparent animate-pulse">
+                <span className="block bg-gradient-to-r from-primary-400 via-white to-primary-400 bg-clip-text text-transparent animate-pulse">
                   Business
                 </span>
               </h2>
@@ -512,9 +512,9 @@ const Home = () => {
               <div className="space-y-8 animate-fade-in-left">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {/* Feature Card 1 */}
-                  <div className="group p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+                  <div className="group p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
@@ -527,9 +527,9 @@ const Home = () => {
                   </div>
 
                   {/* Feature Card 2 */}
-                  <div className="group p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+                  <div className="group p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                         </svg>
@@ -542,9 +542,9 @@ const Home = () => {
                   </div>
 
                   {/* Feature Card 3 */}
-                  <div className="group p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+                  <div className="group p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                         </svg>
@@ -557,9 +557,9 @@ const Home = () => {
                   </div>
 
                   {/* Feature Card 4 */}
-                  <div className="group p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25">
+                  <div className="group p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-primary-500/25">
                     <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
@@ -578,31 +578,31 @@ const Home = () => {
                 {/* Stats Cards */}
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500">
-                    <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2 animate-count">500+</div>
+                    <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2 animate-count">500+</div>
                     <div className="text-gray-300 font-medium">Happy Clients</div>
                   </div>
                   <div className="text-center p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500">
-                    <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2 animate-count">1000+</div>
+                    <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2 animate-count">1000+</div>
                     <div className="text-gray-300 font-medium">Properties Sold</div>
                   </div>
                   <div className="text-center p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500">
-                    <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2 animate-count">98%</div>
+                    <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2 animate-count">98%</div>
                     <div className="text-gray-300 font-medium">Success Rate</div>
                   </div>
                   <div className="text-center p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500">
-                    <div className="text-4xl md:text-5xl font-bold text-blue-400 mb-2 animate-count">24/7</div>
+                    <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2 animate-count">24/7</div>
                     <div className="text-gray-300 font-medium">Support</div>
                   </div>
                 </div>
 
                 {/* CTA Section */}
-                <div className="text-center p-8 bg-gradient-to-r from-blue-600/20 to-blue-500/20 backdrop-blur-sm border border-blue-400/30 rounded-2xl">
+                <div className="text-center p-8 bg-gradient-to-r from-primary-600/20 to-primary-500/20 backdrop-blur-sm border border-primary-400/30 rounded-2xl">
                   <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
                   <p className="text-gray-300 mb-6">Join hundreds of satisfied clients who trust us with their real estate needs</p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Link
                       to="/contact"
-                      className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group"
+                      className="inline-flex items-center bg-primary-600 hover:bg-primary-700 text-white px-3 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-1 group"
                     >
                       <span className="group-hover:scale-105 transition-transform duration-300">Get Started Today</span>
                       <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -611,7 +611,7 @@ const Home = () => {
                     </Link>
                     <Link
                       to="/about"
-                      className="inline-flex items-center bg-white/10 hover:bg-white/20 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-white/20 hover:border-white/40"
+                      className="inline-flex items-center bg-white/10 hover:bg-white/20 text-white px-3 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-white/20 hover:border-white/40"
                     >
                       Learn More
                     </Link>
@@ -623,7 +623,7 @@ const Home = () => {
             {/* Bottom Features Row */}
             <div className="grid md:grid-cols-3 gap-8 animate-fade-in-up animate-delay-500">
               <div className="text-center p-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
@@ -632,7 +632,7 @@ const Home = () => {
                 <p className="text-gray-300">Bank-level security for all your real estate transactions</p>
               </div>
               <div className="text-center p-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse animate-delay-200">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse animate-delay-200">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
@@ -641,7 +641,7 @@ const Home = () => {
                 <p className="text-gray-300">Data-driven insights to make informed decisions</p>
               </div>
               <div className="text-center p-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse animate-delay-400">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse animate-delay-400">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                   </svg>
