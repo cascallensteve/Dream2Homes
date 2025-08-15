@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Logo from './Logo';
 
 const Footer = () => {
   return (
@@ -24,9 +25,12 @@ const Footer = () => {
 
         {/* Footer Content */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-          {/* Copyright */}
-          <div className="text-gray-400 text-sm">
-            <p>All Rights Reserved,© 2024, Dreams2Home.</p>
+          {/* Logo and Copyright */}
+          <div className="flex flex-col items-center md:items-start space-y-3">
+            <Logo size="default" className="opacity-80" />
+            <div className="text-gray-400 text-sm text-center md:text-left">
+              <p>All Rights Reserved,© 2024, Dreams2Home.</p>
+            </div>
           </div>
 
           {/* Social Media Icons */}

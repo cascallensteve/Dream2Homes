@@ -179,7 +179,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-blue-600 font-medium">(817) 653-9233</p>
+                    <a href="tel:8176539233" className="text-blue-600 font-medium hover:text-blue-800 transition-colors cursor-pointer">(817) 653-9233</a>
                   </div>
                 </div>
 
@@ -191,7 +191,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-blue-600 font-medium">info@dreams2home.com</p>
+                    <a href="mailto:info@dreams2home.com" className="text-blue-600 font-medium hover:text-blue-800 transition-colors cursor-pointer">info@dreams2home.com</a>
                   </div>
                 </div>
 
@@ -204,7 +204,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Location</h3>
-                    <p className="text-blue-600 font-medium">Dallas-Fort Worth Metroplex</p>
+                    <a href="https://www.google.com/maps/search/Dallas-Fort+Worth+Metroplex" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-medium hover:text-blue-800 transition-colors cursor-pointer">Dallas-Fort Worth Metroplex</a>
                   </div>
                 </div>
               </div>

@@ -96,25 +96,7 @@ const Home = () => {
                   </div>
                 </div>
 
-                {/* Animated Features */}
-                <div className="space-y-3 lg:space-y-4 animate-fade-in-up animate-delay-500">
-                  <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
-                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-primary-400 rounded-full animate-pulse"></div>
-                    <span className="text-sm lg:text-lg">Wholesaling high-potential properties</span>
-                  </div>
-                  <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
-                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-primary-400 rounded-full animate-pulse animate-delay-200"></div>
-                    <span className="text-sm lg:text-lg">Property management that gives you peace of mind</span>
-                  </div>
-                  <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
-                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-primary-400 rounded-full animate-pulse animate-delay-400"></div>
-                    <span className="text-sm lg:text-lg">Short-term rentals that maximize ROI</span>
-                  </div>
-                  <div className="flex items-center space-x-2 lg:space-x-3 text-white/90">
-                        <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-primary-400 rounded-full animate-pulse animate-delay-600"></div>
-                    <span className="text-sm lg:text-lg">General real estate solutions customized for your needs</span>
-                  </div>
-                </div>
+
 
                 {/* CTA Button */}
                 <div className="animate-fade-in-up animate-delay-700">
@@ -153,7 +135,7 @@ const Home = () => {
       </section>
 
       {/* Typed.js Section */}
-      <section className="py-16 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 relative overflow-hidden">
         {/* Animated background elements */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-20 left-10 w-32 h-32 bg-primary-500/20 rounded-full animate-float"></div>
@@ -161,18 +143,18 @@ const Home = () => {
           <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-primary-500/20 rounded-full animate-bounce animate-delay-1000"></div>
         </div>
         
-        <div className="max-w-4xl mx-auto text-center px-4 relative z-10">
-          <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 animate-fade-in-up">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="space-y-6 sm:space-y-8 lg:space-y-10">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 sm:mb-10 lg:mb-12 animate-fade-in-up">
               The Perfect Match
             </h2>
-            <div className="h-20 md:h-24 flex items-center justify-center">
+            <div className="h-20 sm:h-24 md:h-28 lg:h-32 flex items-center justify-center">
               <span 
                 ref={typedRef}
-                className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-400 leading-relaxed"
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-400 leading-relaxed"
               ></span>
             </div>
-            <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in-up animate-delay-500">
+            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in-up animate-delay-500 px-2 sm:px-0 mt-6 sm:mt-8">
               At Dreams2Home, we believe everyone deserves access to smart, simple, and profitable real estate solutions. Explore. Invest. Stay. Manage. We handle it all — professionally and personally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up animate-delay-700">
@@ -204,14 +186,14 @@ const Home = () => {
         
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           {/* Toggle Selector with 3D effect */}
-          <div className="flex justify-center mb-16">
-            <div className="bg-gray-700/50 backdrop-blur-sm rounded-2xl p-3 border border-gray-600/50 shadow-2xl transform-gpu hover:scale-105 transition-transform duration-300" style={{
+          <div className="flex justify-center mb-12 sm:mb-16">
+            <div className="bg-gray-700/50 backdrop-blur-sm rounded-2xl p-2 sm:p-3 border border-gray-600/50 shadow-2xl stable-transform hover:scale-105 transition-transform duration-300 w-full max-w-lg sm:max-w-none sm:w-auto" style={{
               boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1)'
             }}>
-              <div className="flex space-x-2">
+              <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
                 <button 
                   onClick={() => setActiveTab('sellers')}
-                  className={`px-10 py-4 rounded-xl font-semibold transition-all duration-300 transform-gpu ${
+                  className={`px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 stable-transform text-sm sm:text-base ${
                     activeTab === 'sellers' 
                       ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg shadow-primary-500/25 scale-105' 
                       : 'text-gray-300 hover:bg-gray-600/50 hover:text-white hover:scale-105'
@@ -224,7 +206,7 @@ const Home = () => {
                 </button>
                 <button 
                   onClick={() => setActiveTab('buyers')}
-                  className={`px-10 py-4 rounded-xl font-semibold transition-all duration-300 transform-gpu ${
+                  className={`px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 stable-transform text-sm sm:text-base ${
                     activeTab === 'buyers' 
                       ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg shadow-primary-500/25 scale-105' 
                       : 'text-gray-300 hover:bg-gray-600/50 hover:text-white hover:scale-105'
@@ -237,7 +219,7 @@ const Home = () => {
                 </button>
                 <button 
                   onClick={() => setActiveTab('management')}
-                  className={`px-10 py-4 rounded-xl font-semibold transition-all duration-300 transform-gpu ${
+                  className={`px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-semibold transition-all duration-300 stable-transform text-sm sm:text-base ${
                     activeTab === 'management' 
                       ? 'bg-gradient-to-r from-primary-600 to-primary-700 text-white shadow-lg shadow-primary-500/25 scale-105' 
                       : 'text-gray-300 hover:bg-gray-600/50 hover:text-white hover:scale-105'
@@ -325,7 +307,7 @@ const Home = () => {
                          }}>
                       <div className="w-full h-full rounded-full overflow-hidden shadow-xl">
                         <img 
-                          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1073&q=80"
+                          src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1753882946/people-office-work-day_mej1qi.webp"
                           alt="Happy property seller"
                           className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
                         />
@@ -405,9 +387,9 @@ const Home = () => {
                   <div className="relative transform-gpu hover:scale-105 transition-transform duration-500">
                     <div className="bg-gradient-to-br from-primary-500/10 to-primary-600/10 backdrop-blur-sm rounded-2xl p-6 border border-primary-400/30 shadow-2xl">
                       <img 
-                        src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1755191509/smiley-couple-planning-redecorating-home-removebg-preview_xqlw4e.png"
-                        alt="Happy couple planning home improvements"
-                        className="w-full h-80 lg:h-96 object-contain hover:scale-105 transition-transform duration-700"
+                        src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1755234568/african-female-signing-proof-delivery-while-receiving-parcel-from-courier_jixqkw.jpg"
+                        alt="Professional woman signing delivery documents"
+                        className="w-full h-80 lg:h-96 object-cover rounded-xl hover:scale-105 transition-transform duration-700"
                       />
                     </div>
                     <div className="absolute -top-3 -right-3 w-12 h-12 bg-gradient-to-br from-primary-400 to-primary-500 rounded-lg animate-bounce opacity-80 shadow-lg"></div>
@@ -655,25 +637,17 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* Right Side - Interactive Stats */}
+              {/* Right Side - Feature Image */}
               <div className="space-y-8 animate-fade-in-right">
-                {/* Stats Cards */}
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="text-center p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500">
-                    <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2 animate-count">500+</div>
-                    <div className="text-gray-300 font-medium">Happy Clients</div>
-                  </div>
-                  <div className="text-center p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500">
-                    <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2 animate-count">1000+</div>
-                    <div className="text-gray-300 font-medium">Properties Sold</div>
-                  </div>
-                  <div className="text-center p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500">
-                    <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2 animate-count">98%</div>
-                    <div className="text-gray-300 font-medium">Success Rate</div>
-                  </div>
-                  <div className="text-center p-8 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:bg-white/10 transition-all duration-500">
-                    <div className="text-4xl md:text-5xl font-bold text-primary-400 mb-2 animate-count">24/7</div>
-                    <div className="text-gray-300 font-medium">Support</div>
+                {/* Feature Image */}
+                <div className="flex justify-center">
+                  <div className="relative">
+                    <img 
+                      src="https://res.cloudinary.com/dqvsjtkqw/image/upload/v1753882946/people-office-work-day_mej1qi.webp"
+                      alt="Real estate professionals at work"
+                      className="w-80 h-60 object-cover rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent rounded-2xl"></div>
                   </div>
                 </div>
 

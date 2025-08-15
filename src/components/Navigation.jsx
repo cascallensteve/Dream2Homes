@@ -17,6 +17,20 @@ const Navigation = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -114,15 +128,15 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-t border-gray-700 animate-fade-in-down shadow-2xl z-50">
-            <div className="flex flex-col space-y-2 pt-4 pb-6 px-4 stagger-children">
+          <div className="lg:hidden fixed inset-0 top-20 bg-gray-900/98 backdrop-blur-lg z-40 overflow-hidden">
+            <div className="flex flex-col space-y-2 pt-8 pb-6 px-6 h-full">
               <Link
                 to="/"
                 onClick={() => setIsOpen(false)}
-                className={`relative px-4 py-3 mx-2 rounded-lg text-base font-medium transition-all duration-300 hover-scale group overflow-hidden ${
+                className={`relative px-6 py-4 mx-2 rounded-xl text-lg font-medium transition-all duration-300 group overflow-hidden ${
                   isActive('/') 
-                    ? 'text-blue-400 bg-gray-700/50' 
-                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
+                    ? 'text-blue-400 bg-gray-700/70' 
+                    : 'text-gray-200 hover:text-white hover:bg-gray-700/50'
                 }`}
               >
                 <span className="relative z-10">Home</span>
@@ -131,51 +145,65 @@ const Navigation = () => {
               <Link
                 to="/about"
                 onClick={() => setIsOpen(false)}
-                className={`relative px-4 py-3 mx-2 rounded-lg text-base font-medium transition-all duration-300 hover-scale group overflow-hidden ${
+                className={`relative px-6 py-4 mx-2 rounded-xl text-lg font-medium transition-all duration-300 group overflow-hidden ${
                   isActive('/about') 
-                    ? 'text-blue-400 bg-gray-700/50' 
-                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
+                    ? 'text-blue-400 bg-gray-700/70' 
+                    : 'text-gray-200 hover:text-white hover:bg-gray-700/50'
                 }`}
               >
                 <span className="relative z-10">About</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
               <Link
                 to="/services"
                 onClick={() => setIsOpen(false)}
-                className={`relative px-4 py-3 mx-2 rounded-lg text-base font-medium transition-all duration-300 hover-scale group overflow-hidden ${
+                className={`relative px-6 py-4 mx-2 rounded-xl text-lg font-medium transition-all duration-300 group overflow-hidden ${
                   isActive('/services') 
-                    ? 'text-blue-400 bg-gray-700/50' 
-                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
+                    ? 'text-blue-400 bg-gray-700/70' 
+                    : 'text-gray-200 hover:text-white hover:bg-gray-700/50'
                 }`}
               >
                 <span className="relative z-10">Services</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
               <Link
                 to="/contact"
                 onClick={() => setIsOpen(false)}
-                className={`relative px-4 py-3 mx-2 rounded-lg text-base font-medium transition-all duration-300 hover-scale group overflow-hidden ${
+                className={`relative px-6 py-4 mx-2 rounded-xl text-lg font-medium transition-all duration-300 group overflow-hidden ${
                   isActive('/contact') 
-                    ? 'text-blue-400 bg-gray-700/50' 
-                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
+                    ? 'text-blue-400 bg-gray-700/70' 
+                    : 'text-gray-200 hover:text-white hover:bg-gray-700/50'
                 }`}
               >
                 <span className="relative z-10">Contact</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
               <Link
                 to="/property-listing"
                 onClick={() => setIsOpen(false)}
-                className={`relative px-4 py-3 mx-2 rounded-lg text-base font-medium transition-all duration-300 hover-scale group overflow-hidden ${
+                className={`relative px-6 py-4 mx-2 rounded-xl text-lg font-medium transition-all duration-300 group overflow-hidden ${
                   isActive('/property-listing') 
-                    ? 'text-blue-400 bg-gray-700/50' 
-                    : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
+                    ? 'text-blue-400 bg-gray-700/70' 
+                    : 'text-gray-200 hover:text-white hover:bg-gray-700/50'
                 }`}
               >
                 <span className="relative z-10">Property Listings</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-orange-500/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Link>
+              
+              {/* Mobile CTA Button */}
+              <div className="mt-8 px-2">
+                <Link
+                  to="/contact"
+                  onClick={() => setIsOpen(false)}
+                  className="w-full bg-green-500 hover:bg-green-600 text-black px-6 py-4 rounded-xl font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center"
+                >
+                  <span>Get Cash Offer</span>
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
+              </div>
 
             </div>
           </div>

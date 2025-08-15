@@ -2,6 +2,13 @@
 
 /* === GLOBAL ANIMATION SETTINGS === */
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Smooth transitions for specific properties only */
+.smooth-transition {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -645,6 +652,21 @@
 
 .will-change-auto {
   will-change: auto;
+}
+
+/* Reduce motion for accessibility and better performance */
+.reduce-motion {
+  animation-duration: 0.1s !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.1s !important;
+}
+
+/* Stabilize elements that might cause layout shift */
+.stable-transform {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
 }
 
 /* === CUSTOM EASING === */
